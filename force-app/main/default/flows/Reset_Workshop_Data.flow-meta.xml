@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Run_Reset</name>
+        <label>Ejecutar Reset</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <actionName>Electra_Workshop_Data_Reset</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Result_Screen</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Electra_Workshop_Data_Reset</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <decisions>
+        <name>Validate_Checkbox</name>
+        <label>Validar Confirmación</label>
+        <locationX>176</locationX>
+        <locationY>240</locationY>
+        <defaultConnector>
+            <targetReference>Confirm_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Confirmado</defaultConnectorLabel>
+        <rules>
+            <name>Confirmed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Confirmation_Checkbox</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_Reset</targetReference>
+            </connector>
+            <label>Confirmado</label>
+        </rules>
+    </decisions>
+    <description>Facilitator-facing Screen Flow. Deletes all Electra workshop data via Electra_Workshop_Data_Reset.</description>
+    <environments>Default</environments>
+    <interviewLabel>Resetear Datos del Taller Electra {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Reset Workshop Data</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value><stringValue>LightningFlowBuilder</stringValue></value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>Confirm_Screen</name>
+        <label>Confirmar Reset</label>
+        <locationX>176</locationX>
+        <locationY>120</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Validate_Checkbox</targetReference>
+        </connector>
+        <fields>
+            <name>Confirm_Message</name>
+            <fieldText>&lt;p&gt;&lt;strong style="font-size: 16px;"&gt;⚠ Resetear Datos del Taller — solo facilitador&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Esto borra &lt;strong&gt;TODOS&lt;/strong&gt; los datos sembrados del taller (vehículos, concesionarias, turnos, leads de muestra).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Usalo solo entre sesiones de taller, &lt;strong style="color: #c23934;"&gt;NUNCA durante una demo en vivo&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Los datos no se pueden recuperar después.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;¿Confirmás el reset?&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Confirmation_Checkbox</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Sí, entiendo lo que estoy haciendo</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Continuar</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Result_Screen</name>
+        <label>Resultado</label>
+        <locationX>176</locationX>
+        <locationY>480</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Result_Summary</name>
+            <fieldText>&lt;p&gt;&lt;strong style="font-size: 14px;"&gt;Resultado del reset:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!Run_Reset.summary}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Error_Message</name>
+            <fieldText>&lt;p style="color: #c23934; font-weight: bold;"&gt;{!Run_Reset.errorMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Run_Reset.errorMessage</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <nextOrFinishButtonLabel>Listo</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+<start>
+        <locationX>176</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Confirm_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    </Flow>

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <assignments>
+        <name>Set_Not_Found</name>
+        <label>Set Not Found</label>
+        <locationX>314</locationX>
+        <locationY>360</locationY>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No encontré el modelo "{!modelCode}" en nuestro catálogo. Probá con E-Cruiser, E-Sport, E-Wagon, E-Truck o E-City.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Build_Detail</name>
+        <label>Build Detail</label>
+        <locationX>50</locationX>
+        <locationY>360</locationY>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>🚗 </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> (</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Code__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>)
+Tipo: </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>
+Autonomía: </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Range_Km__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> km (ciclo combinado WLTP)
+Aceleración 0–100 km/h: </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Acceleration_0_100_Sec__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> segundos
+Carga rápida (10–80%): </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Charging_Time_Min__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> min a </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Charging_Power_Kw__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> kW
+Precio: ARS $</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Model.Price_ARS__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>detail</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>
+
+¿Querés agendar una prueba de manejo o ver otro modelo para comparar?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Model_Found</name>
+        <label>Model Found?</label>
+        <locationX>50</locationX>
+        <locationY>240</locationY>
+        <defaultConnector>
+            <targetReference>Set_Not_Found</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Found</defaultConnectorLabel>
+        <rules>
+            <name>Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Model</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Build_Detail</targetReference>
+            </connector>
+            <label>Found</label>
+        </rules>
+    </decisions>
+    <description>Returns Spanish-language detailed spec sheet for a single vehicle model identified by code. Called by ElectraAI Auto Concierge agent.</description>
+    <interviewLabel>Get Vehicle Detail {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Vehicle Detail</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Model</name>
+        <label>Get Model by Code</label>
+        <locationX>50</locationX>
+        <locationY>120</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Model_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>modelCode</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Vehicle_Model__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Code__c</queriedFields>
+        <queriedFields>Type__c</queriedFields>
+        <queriedFields>Range_Km__c</queriedFields>
+        <queriedFields>Acceleration_0_100_Sec__c</queriedFields>
+        <queriedFields>Charging_Time_Min__c</queriedFields>
+        <queriedFields>Charging_Power_Kw__c</queriedFields>
+        <queriedFields>Price_ARS__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Model</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Vehicle model code (e.g., ECRU, ESPT, EWGN, ETRK, ECTY). Required.</description>
+        <name>modelCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Plain-Spanish detailed spec sheet for the vehicle model, or error message if not found.</description>
+        <name>detail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+<areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    </Flow>

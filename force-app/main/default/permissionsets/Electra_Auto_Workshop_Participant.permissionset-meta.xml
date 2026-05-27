@@ -3,6 +3,38 @@
     <description>Electra Auto Workshop Participant — grants access to Vehicle catalog, Test Drive scheduling objects, Sembrar/Resetear flows, and the Electra Sales Studio app.</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Electra Auto Workshop Participant</label>
+    <classAccesses>
+        <apexClass>Electra_Workshop_Data_Seeder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Electra_Workshop_Data_Reset</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Seed_Workshop_Data</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Reset_Workshop_Data</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Get_Vehicle_Catalog</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Get_Vehicle_Detail</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Schedule_Test_Drive</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>Get_Test_Drive_Status</flow>
+    </flowAccesses>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>

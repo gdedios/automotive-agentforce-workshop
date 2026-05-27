@@ -77,11 +77,24 @@
         <name>CustomApplication</name>
     </types>
 
-    <!-- Phase 3 — Flows (filled during Phase 3) -->
-    <!-- Get_Vehicle_Catalog, Get_Vehicle_Detail, Schedule_Test_Drive, Get_Test_Drive_Status, Seed_Workshop_Data, Reset_Workshop_Data -->
+    <!-- Phase 3 + Phase 4 — All Flows (screen flows added once Apex deployed) -->
+    <types>
+        <members>Get_Vehicle_Catalog</members>
+        <members>Get_Vehicle_Detail</members>
+        <members>Schedule_Test_Drive</members>
+        <members>Get_Test_Drive_Status</members>
+        <members>Seed_Workshop_Data</members>
+        <members>Reset_Workshop_Data</members>
+        <name>Flow</name>
+    </types>
 
-    <!-- Phase 4 — Apex Classes (filled during Phase 4) -->
-    <!-- Electra_Workshop_Data_Seeder, Electra_Workshop_Data_Reset, plus *_Test classes -->
+    <!-- Phase 4 — Apex Classes -->
+    <types>
+        <members>Electra_Workshop_Data_Seeder</members>
+        <members>Electra_Workshop_Data_Reset</members>
+        <members>Electra_Workshop_Data_Test</members>
+        <name>ApexClass</name>
+    </types>
 
     <!-- Phase 5 — Atlas Agent Script Bundle (filled during Phase 5) -->
     <!-- ElectraAI_Auto_Concierge -->

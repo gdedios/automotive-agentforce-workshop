@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <assignments>
+        <name>Set_Lead_Not_Found</name>
+        <label>Set Lead Not Found</label>
+        <locationX>314</locationX>
+        <locationY>360</locationY>
+        <assignmentItems>
+            <assignToReference>status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>🤔 No encontré ningún registro con el email "{!customerEmail}". ¿Querés agendar una nueva prueba de manejo?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_No_Appointment</name>
+        <label>Set No Appointment</label>
+        <locationX>314</locationX>
+        <locationY>480</locationY>
+        <assignmentItems>
+            <assignToReference>status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Hola {!Lookup_Lead.FirstName}! Te tenemos como prospecto pero no veo una prueba de manejo agendada. ¿Querés que te ayude a coordinar una?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Confirmado</name>
+        <label>Set Confirmado</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <assignmentItems>
+            <assignToReference>status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Hola {!Lookup_Lead.FirstName}! Tu prueba de manejo está confirmada para el {!Get_Booked_Slot.Slot_DateTime__c}. Nos vemos pronto!</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Completado</name>
+        <label>Set Completado</label>
+        <locationX>578</locationX>
+        <locationY>480</locationY>
+        <assignmentItems>
+            <assignToReference>status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Hola {!Lookup_Lead.FirstName}! Veo que ya hiciste tu prueba de manejo. ¿Cómo te pareció? Contame si querés avanzar con la compra o probar otro modelo.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Cancelado</name>
+        <label>Set Cancelado</label>
+        <locationX>842</locationX>
+        <locationY>480</locationY>
+        <assignmentItems>
+            <assignToReference>status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Hola {!Lookup_Lead.FirstName}! Tu prueba de manejo anterior figura como cancelada. ¿Querés agendar una nueva?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+<decisions>
+        <name>Lead_Found</name>
+        <label>Lead Found?</label>
+        <locationX>50</locationX>
+        <locationY>240</locationY>
+        <defaultConnector>
+            <targetReference>Set_Lead_Not_Found</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Found</defaultConnectorLabel>
+        <rules>
+            <name>Lead_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Lead</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Test_Drive_Status</targetReference>
+            </connector>
+            <label>Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Test_Drive_Status</name>
+        <label>Check Test Drive Status</label>
+        <locationX>50</locationX>
+        <locationY>360</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Appointment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Sin Cita or Null</defaultConnectorLabel>
+        <rules>
+            <name>Status_Confirmado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Lead.Test_Drive_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Confirmado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Booked_Slot</targetReference>
+            </connector>
+            <label>Confirmado</label>
+        </rules>
+        <rules>
+            <name>Status_Completado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Lead.Test_Drive_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Completado</targetReference>
+            </connector>
+            <label>Completado</label>
+        </rules>
+        <rules>
+            <name>Status_Cancelado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Lead.Test_Drive_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Cancelado</targetReference>
+            </connector>
+            <label>Cancelado</label>
+        </rules>
+    </decisions>
+    <description>Returns test drive booking status for a customer by email. Called by Electra Auto Concierge agent.</description>
+    <interviewLabel>Get Test Drive Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Test Drive Status</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Lookup_Lead</name>
+        <label>Lookup Lead</label>
+        <locationX>50</locationX>
+        <locationY>120</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Lead_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Email</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>customerEmail</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>FirstName</queriedFields>
+        <queriedFields>Test_Drive_Status__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Booked_Slot</name>
+        <label>Get Booked Slot</label>
+        <locationX>50</locationX>
+        <locationY>480</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Confirmado</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Booked_By__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Lookup_Lead.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Reservado</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Test_Drive_Slot__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Slot_DateTime__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Lookup_Lead</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Customer email address</description>
+        <name>customerEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Test drive status message</description>
+        <name>status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    </Flow>
