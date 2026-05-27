@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "b8e56134-c76e-4c28-9c40-2985f7d8f907",
+        "isContentSafe": true,
+        "message": "Tu prueba de manejo está confirmada para el 28/5/2026 a las 10:00 AM en la Concesionaria Electra Palermo. Nos vemos pronto.\n\n¿Querés saber algo sobre el vehículo, la carga o la garantía antes de tu visita?",
+        "id": "a6745d1605bc4411a1135736987da1f3",
+        "metrics": {},
+        "planId": "b8e56134-c76e-4c28-9c40-2985f7d8f907",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "ElectraAI_Auto_Concierge",
+    "sessionId": "019e6a08-a83a-75a9-8d88-5c4275b26888"
+  },
+  "warnings": []
+}

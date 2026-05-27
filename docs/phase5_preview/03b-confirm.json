@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "117d4e22-cf8f-42a1-8782-fb4a38f75767",
+        "isContentSafe": true,
+        "message": "¡Listo! Tu prueba de manejo del E-Cruiser en la Concesionaria Electra Palermo quedó confirmada para el sábado 6/2/2026 a las 10:00 AM. Te esperamos.\n\nNúmero de confirmación: TD-TDS-0006\n\n¿Querés recibir un recordatorio o te ayudo con otra consulta sobre Electra?",
+        "id": "5c8986f67bbe498d804a23bd158931ef",
+        "metrics": {},
+        "planId": "117d4e22-cf8f-42a1-8782-fb4a38f75767",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "ElectraAI_Auto_Concierge",
+    "sessionId": "019e6a08-a83a-75a9-8d88-5c4275b26888"
+  },
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "1dd87203-7a0f-47e1-b2ef-96cac9732429",
+        "isContentSafe": true,
+        "message": "Encontré un turno disponible para probar el E-Cruiser:\n\n📅 Sábado 6/2/2026, 10:00 AM  \n🚗 E-Cruiser (ECRU)  \n📍 Concesionaria Electra Palermo — Buenos Aires  \n👤 Reservaría a nombre de Sofía Vega (sofia.vega@example.com.ar)\n\n¿Confirmás la reserva? Si sí, avisame y la hago efectiva enseguida.",
+        "id": "b4cbb3b21b644070930efd99f020bc92",
+        "metrics": {},
+        "planId": "1dd87203-7a0f-47e1-b2ef-96cac9732429",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "ElectraAI_Auto_Concierge",
+    "sessionId": "019e6a08-a83a-75a9-8d88-5c4275b26888"
+  },
+  "warnings": []
+}

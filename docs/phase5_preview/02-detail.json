@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "66d8a5b3-674d-431a-820d-68abe51988e3",
+        "isContentSafe": true,
+        "message": "El E-Cruiser (ECRU) es un sedán familiar con estas características:\n\nAutonomía: 520 km (ciclo combinado WLTP)\nAceleración 0–100 km/h: 6.8 segundos\nCarga rápida (10–80%): 28 minutos a 150 kW\nPrecio: ARS 48.000.000\n\n¿Querés comparar el E-Cruiser con otro modelo o preferís agendar una prueba de manejo?",
+        "id": "ee01235840f4421abdaa93e456287a3c",
+        "metrics": {},
+        "planId": "66d8a5b3-674d-431a-820d-68abe51988e3",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "ElectraAI_Auto_Concierge",
+    "sessionId": "019e6a08-a83a-75a9-8d88-5c4275b26888"
+  },
+  "warnings": []
+}

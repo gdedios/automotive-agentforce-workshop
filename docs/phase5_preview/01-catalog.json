@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "b5cf6d10-0b59-4345-8758-ac40fd6d74c3",
+        "isContentSafe": true,
+        "message": "Estos son los modelos eléctricos disponibles de Electra:\n\n• E-Cruiser (Sedán familiar): autonomía 520 km, 0–100 km/h en 6.8 segundos, carga rápida en 28 minutos, precio ARS 48.000.000.\n• E-City (Hatchback compacto): autonomía 360 km, 0–100 km/h en 9.1 segundos, carga rápida en 25 minutos, precio ARS 32.000.000.\n• E-Sport (Coupé): autonomía 480 km, 0–100 km/h en 4.2 segundos, carga rápida en 30 minutos, precio ARS 58.000.000.\n• E-Truck (Pickup): autonomía 460 km, 0–100 km/h en 7 segundos, carga rápida en 35 minutos, precio ARS 62.000.000.\n• E-Wagon (Wagon/station): autonomía 510 km, 0–100 km/h en 7.4 segundos, carga rápida en 28 minutos, precio ARS 46.000.000.\n\n¿Querés comparar algún modelo o agendar una prueba de manejo?",
+        "id": "c83449ca0fdd4384a9576118bf5b4c05",
+        "metrics": {},
+        "planId": "b5cf6d10-0b59-4345-8758-ac40fd6d74c3",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "ElectraAI_Auto_Concierge",
+    "sessionId": "019e6a08-a83a-75a9-8d88-5c4275b26888"
+  },
+  "warnings": []
+}

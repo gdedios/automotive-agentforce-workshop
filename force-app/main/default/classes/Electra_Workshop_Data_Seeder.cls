@@ -105,9 +105,7 @@ public with sharing class Electra_Workshop_Data_Seeder {
                     Type='Dealer',
                     City_AR__c='Buenos Aires',
                     BillingStreet='Av. Córdoba 4500',
-                    BillingCity='CABA',
-                    BillingState='Buenos Aires',
-                    BillingCountry='Argentina'
+                    BillingCity='CABA'
                 ),
                 new Account(
                     Name='Concesionaria Electra Córdoba',
@@ -115,9 +113,7 @@ public with sharing class Electra_Workshop_Data_Seeder {
                     Type='Dealer',
                     City_AR__c='Córdoba',
                     BillingStreet='Bv. Chacabuco 850',
-                    BillingCity='Córdoba',
-                    BillingState='Córdoba',
-                    BillingCountry='Argentina'
+                    BillingCity='Córdoba'
                 ),
                 new Account(
                     Name='Concesionaria Electra Rosario',
@@ -125,9 +121,7 @@ public with sharing class Electra_Workshop_Data_Seeder {
                     Type='Dealer',
                     City_AR__c='Rosario',
                     BillingStreet='Córdoba 1200',
-                    BillingCity='Rosario',
-                    BillingState='Santa Fe',
-                    BillingCountry='Argentina'
+                    BillingCity='Rosario'
                 )
             };
             Database.insert(dealers, AccessLevel.SYSTEM_MODE);
