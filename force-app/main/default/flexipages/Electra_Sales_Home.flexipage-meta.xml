@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:richText</componentName>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;h1 style="color: #050516; margin-bottom: 0.25rem;"&gt;🚗 Taller Agentforce — Electra Auto Concierge&lt;/h1&gt;&lt;p style="margin-top: 0;"&gt;&lt;em style="color: #4723EB;"&gt;Lead-to-Test-Drive · Argentina&lt;/em&gt;&lt;/p&gt;&lt;p style="color: #393942;"&gt;Trabajás como SE de Salesforce y vas a construir un agente conversacional para Electra, una marca de autos eléctricos. Durante este taller vas a configurar el catálogo de vehículos, el flujo de agendar una prueba de manejo y la base de conocimiento sobre garantía y carga. El agente atiende a Sofía Vega, una compradora interesada en el E-Cruiser.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <identifier>welcomeText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:richText</componentName>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style="padding: 1rem; background: #F0EBFD; border-radius: 0.5rem; border: 1px solid #4723EB;"&gt;&lt;h2 style="color: #050516;"&gt;📥 Paso 1 — Sembrar Datos del Taller&lt;/h2&gt;&lt;p style="color: #393942;"&gt;Antes de empezar los ejercicios, cargá los datos de ejemplo de Electra: 5 vehículos (E-Cruiser, E-Sport, E-Wagon, E-Truck, E-City), 3 concesionarias (Palermo, Córdoba, Rosario), ~20 turnos de prueba de manejo y 3 leads de muestra.&lt;/p&gt;&lt;p&gt;&lt;a href="/flow/Seed_Workshop_Data" target="_self" style="display: inline-block; padding: 0.75rem 1.5rem; background: #4723EB; color: white; text-decoration: none; border-radius: 0.25rem; font-weight: bold;"&gt;▶ Sembrar Datos&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <identifier>seedPanel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:richText</componentName>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;h3 style="color: #050516;"&gt;🧭 Navegación rápida&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/lightning/o/Vehicle_Model__c/list" target="_self" style="color: #4723EB;"&gt;Catálogo de vehículos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/lightning/o/Test_Drive_Slot__c/list" target="_self" style="color: #4723EB;"&gt;Turnos disponibles&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/lightning/o/Vehicle_Inventory__c/list" target="_self" style="color: #4723EB;"&gt;Stock por concesionaria&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/lightning/o/Account/list" target="_self" style="color: #4723EB;"&gt;Concesionarias (Accounts)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/lightning/o/Lead/list" target="_self" style="color: #4723EB;"&gt;Leads&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/lightning/o/Event/list" target="_self" style="color: #4723EB;"&gt;Eventos / pruebas agendadas&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <identifier>navLinks</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:richText</componentName>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;h3 style="color: #050516;"&gt;🤖 Probá el agente&lt;/h3&gt;&lt;p style="color: #393942;"&gt;Una vez cargados los datos, abrí el panel de Einstein (ícono en la barra lateral derecha) y conversá con Electra Auto Concierge. Sofía Vega te tira algunas ideas:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;em style="color: #393942;"&gt;"Hola, soy Sofía Vega. Quiero comparar el E-Cruiser con el E-Wagon — ando con dudas entre los dos para viajes largos."&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;em style="color: #393942;"&gt;"¿Qué autonomía tiene el E-Cruiser y cuánto tarda en cargar al 80%?"&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;em style="color: #393942;"&gt;"Quiero agendar una prueba de manejo del E-Cruiser en Palermo, sábado a las 11."&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;em style="color: #393942;"&gt;"¿Cómo es la garantía de la batería del E-Cruiser?"&lt;/em&gt;&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <identifier>agentHints</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>bottomLeft</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:richText</componentName>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;h3 style="color: #050516;"&gt;🔄 Facilitador&lt;/h3&gt;&lt;p&gt;&lt;small style="color: #393942;"&gt;Solo para uso del facilitador entre sesiones.&lt;/small&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="/flow/Reset_Workshop_Data" target="_self" style="display: inline-block; padding: 0.5rem 1rem; background: #393942; color: white; text-decoration: none; border-radius: 0.25rem; font-size: 0.9rem;"&gt;⚠ Resetear Datos&lt;/a&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <identifier>facilitatorReset</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>bottomRight</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Electra Sales Studio Home</masterLabel>
+    <template>
+        <name>home:desktopTemplate</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>

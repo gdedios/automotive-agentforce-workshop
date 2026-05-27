@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Code__c</fullName>
+    <description>External code for Electra concesionaria, e.g. DLR_PALERMO. Marks Account as a dealer when populated alongside Type='Dealer'.</description>
+    <externalId>true</externalId>
+    <label>Dealer Code</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

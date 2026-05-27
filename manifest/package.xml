@@ -2,35 +2,86 @@
 <!--
   Electra Automotive Workshop — Lead-to-Test-Drive Sales Agent — deploy manifest
 
-  Skeleton — populated phase-by-phase as metadata is authored.
-
-  STAGED ORDER (when populated):
-    1. CustomObject + CustomField (within objects)
-    2. ListView
-    3. Flow
-    4. ApexClass
-    5. PermissionSet
-    6. CustomTab + FlexiPage + CustomApplication
-    7. AiAuthoringBundle + AiEvaluationDefinition (after flows it references)
-    8. ContentAsset / ContentVersion (PDFs for Data Library)
-    9. (Phase 7, manual) MessagingChannel + Network + DigitalExperienceBundle
+  Populated phase-by-phase. Phase 2 entries below are live.
 -->
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
-    <!-- Phase 2 — Custom Objects (filled during Phase 2) -->
-    <!-- <types><members>Vehicle_Model__c</members><members>Test_Drive_Slot__c</members><members>Vehicle_Inventory__c</members><name>CustomObject</name></types> -->
+    <!-- Phase 2 — Custom Objects -->
+    <types>
+        <members>Vehicle_Model__c</members>
+        <members>Test_Drive_Slot__c</members>
+        <members>Vehicle_Inventory__c</members>
+        <name>CustomObject</name>
+    </types>
 
-    <!-- Phase 2 — Custom Fields (filled during Phase 2) -->
+    <!-- Phase 2 — Custom Fields (custom objects + standard-object overrides) -->
+    <types>
+        <members>Vehicle_Model__c.Code__c</members>
+        <members>Vehicle_Model__c.Type__c</members>
+        <members>Vehicle_Model__c.Range_Km__c</members>
+        <members>Vehicle_Model__c.Acceleration_0_100_Sec__c</members>
+        <members>Vehicle_Model__c.Charging_Time_Min__c</members>
+        <members>Vehicle_Model__c.Charging_Power_Kw__c</members>
+        <members>Vehicle_Model__c.Price_ARS__c</members>
+        <members>Vehicle_Model__c.Position__c</members>
+        <members>Vehicle_Model__c.Active__c</members>
+        <members>Test_Drive_Slot__c.Slot_DateTime__c</members>
+        <members>Test_Drive_Slot__c.Duration_Min__c</members>
+        <members>Test_Drive_Slot__c.Vehicle_Model__c</members>
+        <members>Test_Drive_Slot__c.Dealer__c</members>
+        <members>Test_Drive_Slot__c.Status__c</members>
+        <members>Test_Drive_Slot__c.Booked_By__c</members>
+        <members>Vehicle_Inventory__c.Vehicle_Model__c</members>
+        <members>Vehicle_Inventory__c.Dealer__c</members>
+        <members>Vehicle_Inventory__c.Quantity_Available__c</members>
+        <members>Vehicle_Inventory__c.Last_Updated__c</members>
+        <members>Lead.Vehicle_of_Interest__c</members>
+        <members>Lead.Preferred_Dealer__c</members>
+        <members>Lead.Test_Drive_Status__c</members>
+        <members>Account.Dealer_Code__c</members>
+        <members>Account.City_AR__c</members>
+        <name>CustomField</name>
+    </types>
 
-    <!-- Phase 2 — List Views (filled during Phase 2) -->
+    <!-- Phase 2 — List Views -->
+    <types>
+        <members>Vehicle_Model__c.All</members>
+        <members>Test_Drive_Slot__c.All</members>
+        <members>Vehicle_Inventory__c.All</members>
+        <name>ListView</name>
+    </types>
+
+    <!-- Phase 2 — Tabs -->
+    <types>
+        <members>Vehicle_Model__c</members>
+        <members>Test_Drive_Slot__c</members>
+        <members>Vehicle_Inventory__c</members>
+        <name>CustomTab</name>
+    </types>
+
+    <!-- Phase 2 — Permission Set -->
+    <types>
+        <members>Electra_Auto_Workshop_Participant</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Phase 2 — Flexipage -->
+    <types>
+        <members>Electra_Sales_Home</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <!-- Phase 2 — Custom Application -->
+    <types>
+        <members>Electra_Sales_Studio</members>
+        <name>CustomApplication</name>
+    </types>
 
     <!-- Phase 3 — Flows (filled during Phase 3) -->
     <!-- Get_Vehicle_Catalog, Get_Vehicle_Detail, Schedule_Test_Drive, Get_Test_Drive_Status, Seed_Workshop_Data, Reset_Workshop_Data -->
 
     <!-- Phase 4 — Apex Classes (filled during Phase 4) -->
     <!-- Electra_Workshop_Data_Seeder, Electra_Workshop_Data_Reset, plus *_Test classes -->
-
-    <!-- Phase 2 — Tabs / App / Flexipage / Permission Set (filled during Phase 2) -->
 
     <!-- Phase 5 — Atlas Agent Script Bundle (filled during Phase 5) -->
     <!-- ElectraAI_Auto_Concierge -->

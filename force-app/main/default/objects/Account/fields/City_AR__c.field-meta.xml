@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>City_AR__c</fullName>
+    <description>City location within Argentina for Electra dealers.</description>
+    <label>City (AR)</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

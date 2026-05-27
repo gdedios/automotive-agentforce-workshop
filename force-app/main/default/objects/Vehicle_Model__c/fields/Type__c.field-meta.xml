@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Vehicle body type classification.</description>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sedan</fullName>
+                <default>false</default>
+                <label>Sedan</label>
+            </value>
+            <value>
+                <fullName>Coupé</fullName>
+                <default>false</default>
+                <label>Coupé</label>
+            </value>
+            <value>
+                <fullName>Wagon</fullName>
+                <default>false</default>
+                <label>Wagon</label>
+            </value>
+            <value>
+                <fullName>Pickup</fullName>
+                <default>false</default>
+                <label>Pickup</label>
+            </value>
+            <value>
+                <fullName>Hatchback</fullName>
+                <default>false</default>
+                <label>Hatchback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

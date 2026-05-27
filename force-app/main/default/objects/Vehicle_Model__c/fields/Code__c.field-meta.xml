@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Code__c</fullName>
+    <description>Stable code for model identification, e.g. E_CRUISER, E_SPORT, E_WAGON. Used for consistent referencing across systems.</description>
+    <externalId>true</externalId>
+    <label>Model Code</label>
+    <length>40</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

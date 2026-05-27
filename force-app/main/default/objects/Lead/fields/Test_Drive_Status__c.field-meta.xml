@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Drive_Status__c</fullName>
+    <description>Current status of this lead's test drive appointment.</description>
+    <label>Test Drive Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confirmado</fullName>
+                <default>false</default>
+                <label>Confirmado</label>
+            </value>
+            <value>
+                <fullName>Completado</fullName>
+                <default>false</default>
+                <label>Completado</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Sin Cita</fullName>
+                <default>false</default>
+                <label>Sin Cita</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

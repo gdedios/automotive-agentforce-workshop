@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booked_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The lead who has booked this test drive slot.</description>
+    <label>Booked By Lead</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Booked Test Drive Slots</relationshipLabel>
+    <relationshipName>Booked_Test_Drive_Slots</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

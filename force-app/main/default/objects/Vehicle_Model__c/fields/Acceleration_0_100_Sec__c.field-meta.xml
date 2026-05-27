@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acceleration_0_100_Sec__c</fullName>
+    <description>Acceleration time from 0 to 100 km/h in seconds.</description>
+    <label>0–100 (sec)</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

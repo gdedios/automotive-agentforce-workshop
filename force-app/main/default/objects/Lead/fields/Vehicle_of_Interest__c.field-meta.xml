@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle_of_Interest__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Electra vehicle model this lead is interested in.</description>
+    <label>Vehicle of Interest</label>
+    <referenceTo>Vehicle_Model__c</referenceTo>
+    <relationshipLabel>Interested Leads</relationshipLabel>
+    <relationshipName>Interested_Leads</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>
