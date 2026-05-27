@@ -40,7 +40,8 @@ data/contentassets/
 # Phase 5 deploy override: aiAuthoringBundles/ temporarily un-ignored so the
 # .agent metadata-deploy path can run. Restore this rule after Phase 5 settles.
 # force-app/main/default/aiAuthoringBundles/
-force-app/main/default/aiEvaluationDefinitions/
+# Phase 5e: aiEvaluationDefinitions un-ignored so test bundle can deploy.
+# force-app/main/default/aiEvaluationDefinitions/
 force-app/main/default/genAiPlannerBundles/
 force-app/main/default/bots/
 # Site metadata — Salesforce 2GP packaging rejects DigitalExperienceBundle ("not
