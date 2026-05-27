@@ -1,0 +1,15 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": true,
+      "package": "Electra Auto Workshop Bootstrap",
+      "versionDescription": "Bootstrap metadata for the Electra Automotive Lead-to-Test-Drive workshop: custom objects (Vehicle_Model__c, Test_Drive_Slot__c, Vehicle_Inventory__c), 4 agent-backing autolaunched flows + 2 student-facing screen flows (Sembrar/Resetear), idempotent Apex seeder + reset, Lightning App + Home flexipage with one-click data buttons, permission set, 3 Spanish PDFs as Data Library content, and the Electra Customer Portal Experience Cloud LWR site (Network + DigitalExperienceBundle) wired to MIAW. Students BUILD the agent, the Data Library, and the MIAW chat deployment during the workshop."
+    }
+  ],
+  "name": "automotive-workshop-electra",
+  "namespace": "",
+  "sourceApiVersion": "66.0"
+}

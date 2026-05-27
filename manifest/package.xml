@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Electra Automotive Workshop — Lead-to-Test-Drive Sales Agent — deploy manifest
+
+  Skeleton — populated phase-by-phase as metadata is authored.
+
+  STAGED ORDER (when populated):
+    1. CustomObject + CustomField (within objects)
+    2. ListView
+    3. Flow
+    4. ApexClass
+    5. PermissionSet
+    6. CustomTab + FlexiPage + CustomApplication
+    7. AiAuthoringBundle + AiEvaluationDefinition (after flows it references)
+    8. ContentAsset / ContentVersion (PDFs for Data Library)
+    9. (Phase 7, manual) MessagingChannel + Network + DigitalExperienceBundle
+-->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Phase 2 — Custom Objects (filled during Phase 2) -->
+    <!-- <types><members>Vehicle_Model__c</members><members>Test_Drive_Slot__c</members><members>Vehicle_Inventory__c</members><name>CustomObject</name></types> -->
+
+    <!-- Phase 2 — Custom Fields (filled during Phase 2) -->
+
+    <!-- Phase 2 — List Views (filled during Phase 2) -->
+
+    <!-- Phase 3 — Flows (filled during Phase 3) -->
+    <!-- Get_Vehicle_Catalog, Get_Vehicle_Detail, Schedule_Test_Drive, Get_Test_Drive_Status, Seed_Workshop_Data, Reset_Workshop_Data -->
+
+    <!-- Phase 4 — Apex Classes (filled during Phase 4) -->
+    <!-- Electra_Workshop_Data_Seeder, Electra_Workshop_Data_Reset, plus *_Test classes -->
+
+    <!-- Phase 2 — Tabs / App / Flexipage / Permission Set (filled during Phase 2) -->
+
+    <!-- Phase 5 — Atlas Agent Script Bundle (filled during Phase 5) -->
+    <!-- ElectraAI_Auto_Concierge -->
+
+    <!-- Phase 5 — Agent Test Spec (filled during Phase 5) -->
+
+    <!-- Phase 7 — Experience Cloud + MIAW (filled during Phase 7) -->
+
+    <version>66.0</version>
+</Package>

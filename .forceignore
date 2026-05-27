@@ -1,0 +1,51 @@
+# LWC defaults that drift — managed elsewhere
+**/jsconfig.json
+**/.eslintrc.json
+**/.prettierrc
+**/.prettierignore
+
+# Local working files — never deploy
+.DS_Store
+*.log
+*.bak
+.sfdx/
+.sf/
+.vscode/
+
+# Plan/handoff files live in docs/, not metadata
+docs/COMPRESSION_*.md
+docs/PLAN.md
+docs/V2_REFERENCES.md
+docs/ELECTRA_BRAND.md
+docs/SESSION_HANDOFF*.md
+docs/GUIA_DRIFT.md
+docs/drift-ej*.md
+docs/screenshots/
+docs/*.pdf
+docs/guia-participante*.md
+
+# Skill-extraction working files — local only
+skill-creation/
+
+# Pdf gen scratch
+scripts/pdfgen/
+data/seed-pdfs/*.pdf
+data/contentassets/
+
+# === STUDENT-BUILD METADATA — NOT shipped in the workshop bootstrap package ===
+# Students author the agent, eval suite, Data Library, Experience Cloud site,
+# and MIAW deployment as part of the workshop exercises. These directories
+# exist in source for facilitator end-state demos (install.sh) but are
+# excluded from the unlocked-package bootstrap that students install.
+force-app/main/default/aiAuthoringBundles/
+force-app/main/default/aiEvaluationDefinitions/
+force-app/main/default/genAiPlannerBundles/
+force-app/main/default/bots/
+# Site metadata — Salesforce 2GP packaging rejects DigitalExperienceBundle ("not
+# compatible with site workspaces"). The Electra portal bundle is tracked in
+# source but excluded from the unlocked-package build. Facilitators deploy the
+# bundle separately via `sf project deploy start` from this repo.
+force-app/main/default/digitalExperiences/
+force-app/main/default/messagingChannels/
+force-app/main/default/EmbeddedServiceConfig/
+force-app/main/default/brandingSets/

@@ -1,0 +1,24 @@
+# Salesforce CLI working dirs
+.sf/
+.sfdx/
+
+# OS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Local PDF gen output (regenerable)
+data/seed-pdfs/*.pdf
+docs/*.pdf
+docs/screenshots/
+
+# Roundtrip verification scratch
+pkg-verify/
+
+# Per-agent Playwright Chrome profiles
+/tmp/chrome-electra-*
+
+# Logs
+*.log
