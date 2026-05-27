@@ -37,7 +37,9 @@ data/contentassets/
 # and MIAW deployment as part of the workshop exercises. These directories
 # exist in source for facilitator end-state demos (install.sh) but are
 # excluded from the unlocked-package bootstrap that students install.
-force-app/main/default/aiAuthoringBundles/
+# Phase 5 deploy override: aiAuthoringBundles/ temporarily un-ignored so the
+# .agent metadata-deploy path can run. Restore this rule after Phase 5 settles.
+# force-app/main/default/aiAuthoringBundles/
 force-app/main/default/aiEvaluationDefinitions/
 force-app/main/default/genAiPlannerBundles/
 force-app/main/default/bots/

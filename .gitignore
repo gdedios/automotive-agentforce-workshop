@@ -22,3 +22,6 @@ pkg-verify/
 
 # Logs
 *.log
+
+# Node deps (Playwright lives in scripts/node_modules)
+node_modules/
