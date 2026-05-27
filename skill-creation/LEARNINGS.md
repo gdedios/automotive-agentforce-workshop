@@ -34,6 +34,47 @@ These are not Automotive-specific learnings; they are the *floor* we start from.
 
 <!-- Phase 1 entries below -->
 
+### LRN-001 `INVALID_TYPE: Cannot use: AiAuthoringBundle` means Einstein/Agentforce toggle is OFF, not wrong org type
+**Phase:** 0.5 / 1
+**Distinct from v2 because:** v2 inherited an already-toggled-on org. On a *fresh* OrgFarm Atlas trial, both toggles are OFF by default and must be flipped before any AiAuthoringBundle metadata works.
+**What broke / what we learned:** I misdiagnosed `INVALID_TYPE: Cannot use: AiAuthoringBundle in this organization` as "this org is the wrong template" (a Pronto Service Cloud preload, etc.) and went down a dead-end path looking for a different org. The user corrected: "AiAuthoringBundle is not showing because YOU HAVE NOT ENABLED EINSTEIN YET!" The Atlas-capable org checklist now is: (1) Turn on Einstein, (2) Turn on Agentforce Agents, (3) only then does `sf org list metadata -m AiAuthoringBundle` resolve.
+**Fix / pattern to memorialize:**
+
+The two URLs and the order:
+
+```bash
+# 1. Mint frontdoor URL (auth survives MFA expiry)
+sf org open --url-only -o <alias> -p /lightning/setup/EinsteinGPTSetup/home --json
+
+# 2. Toggle "Turn on Einstein" (the ONLY non-disabled switch on EinsteinGPTSetup)
+# 3. Refresh
+# 4. Mint frontdoor URL for /lightning/setup/EinsteinCopilot/home
+#    (this is the Agentforce Studio > Agentforce Agents page,
+#     NOT the OLD Builder despite the URL name)
+# 5. Toggle the "Agentforce" switch in the page header (top-right)
+# 6. Wait ~30s, then verify:
+sf org list metadata -m AiAuthoringBundle -o <alias> --json   # must return without INVALID_TYPE
+```
+
+Notes that cost time:
+
+- `EinsteinSetup/home` returns "Page not found" on Spring '26 trials. The working URL is **`EinsteinGPTSetup/home`**.
+- `AgentforceAgents/home` returns "Page not found". The working URL is **`AgentforceSetup/home`** (which is just a landing page) → click "Review Settings" → lands on **`EinsteinCopilot/home`**, which is where the actual Agentforce master toggle lives. Direct-nav to `EinsteinCopilot/home` works too.
+- Despite workspace CLAUDE.md saying "do not navigate to `/lightning/setup/EinsteinCopilot/home` (that's the OLD Builder)" — that warning applies to **building agents in the OLD Topic-based wizard**. The same URL is *also* where the Agentforce master enable-toggle lives. Two different uses for the same URL; we're using it for enablement only.
+- When walking shadow DOM for the toggle, the Agentforce master switch has no visible label text near it (just "Off" or "On"). Don't filter by label — find "the only checkbox/switch on the page that is unchecked AND not disabled" and click that.
+- Setup pages on Spring '26 trials show a Spring '26 loading splash for ~10–25s before the real content renders. Poll for `.slds-page-header` / "Quick Find" / heading text rather than fixed sleep.
+- Both toggles **persist after refresh and across sessions** — so this is a one-time bootstrap step, not a per-session warmup.
+
+**[SKILL-CANDIDATE]** Add to the skill's `references/atlas-trial-bootstrap.md`:
+> "Before any AiAuthoringBundle work on a fresh OrgFarm Atlas trial:
+> 1. `sf org list metadata -m AiAuthoringBundle -o <alias> --json` → `INVALID_TYPE` is the *expected* signal that Einstein + Agentforce toggles are off, NOT a signal that the org is wrong.
+> 2. Visit `/lightning/setup/EinsteinGPTSetup/home`, toggle `Turn on Einstein`.
+> 3. Visit `/lightning/setup/EinsteinCopilot/home`, toggle the master `Agentforce` switch in the page header.
+> 4. Re-run the metadata list — should resolve in under a minute.
+> The skill should ship a Playwright script (`scripts/bootstrap-atlas-toggles.js`) that does steps 2–3 headlessly via frontdoor URL, polls for Setup chrome, finds 'the only enabled-and-unchecked toggle on the page' and clicks it."
+
+A Playwright script that drove this end-to-end on this org is committed at `scripts/enable-einstein-agentforce-v2.js` (Einstein part) + `scripts/enable-agentforce-agents.js` (Agentforce part). They use the persistent-context Chrome-for-Testing pattern + frontdoor URLs to survive MFA. Future skill should bundle these as a single reusable script.
+
 <!-- Phase 2 entries below -->
 
 <!-- Phase 3 entries below -->

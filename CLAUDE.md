@@ -100,6 +100,7 @@ These are the failure modes already known. Apply them preemptively:
 - All `sf` commands use `-o Electra_Auto` (or whatever alias the user supplied at Phase 1)
 - **Phase 12 wipes the alias** with `sf org logout --no-prompt -o Electra_Auto` to avoid future stale-alias issues
 - If any other test-org aliases (e.g., from drift rounds) get registered during the build, log them in `docs/SESSION_HANDOFF.md` and wipe in Phase 12
+- **`INVALID_TYPE: Cannot use: AiAuthoringBundle` on a fresh OrgFarm trial = Einstein/Agentforce toggles are OFF, NOT a wrong-org-type signal.** Drive Playwright to enable both before assuming the org is mis-templated. Einstein at `/lightning/setup/EinsteinGPTSetup/home` (`Turn on Einstein` switch); Agentforce at `/lightning/setup/EinsteinCopilot/home` (master `Agentforce` switch in page header — find the only enabled-and-unchecked toggle and click it). Both persist; one-time bootstrap. Reference scripts: `scripts/enable-einstein-agentforce-v2.js` + `scripts/enable-agentforce-agents.js`.
 
 ---
 

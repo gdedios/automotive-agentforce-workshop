@@ -21,7 +21,7 @@ system:
 
 config:
 	developer_name: "ElectraAI_Auto_Concierge"
-	default_agent_user: "agent.bh1emacumvbm.vuhizuxuekcp.szxxj3jqhscj.5jn16rms1nat@salesforce.com"
+	default_agent_user: "agent.user.e34d4d1c9ff9@orgfarm.salesforce.com"
 	agent_label: "Electra Auto Concierge"
 	description: "Agente concierge de Electra Auto: descubrimiento de modelos eléctricos, agendamiento de prueba de manejo, FAQ sobre carga / garantía / mantenimiento."
 

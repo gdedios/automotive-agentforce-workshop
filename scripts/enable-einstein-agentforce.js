@@ -101,10 +101,11 @@ function checkAtlasPublishable() {
   try {
     // ---- 1) Einstein Setup ----
     console.log('\n=== STEP 1/3: Einstein Setup ===');
-    const einUrl = frontdoor('/lightning/setup/EinsteinGPTSetup/home');
-    console.log('[goto] EinsteinGPTSetup');
+    // Try EinsteinSetup first (Spring '26 path); EinsteinGPTSetup is older
+    const einUrl = frontdoor('/lightning/setup/EinsteinSetup/home');
+    console.log('[goto] EinsteinSetup');
     await page.goto(einUrl, { waitUntil: 'domcontentloaded' });
-    await sleep(10000);
+    await sleep(18000); // Setup pages need extra time past domcontentloaded
     await shot(page, '1-einstein-initial');
     const ein1 = await getToggleState(page);
     console.log('[einstein] toggle state before:', ein1);
@@ -124,12 +125,18 @@ function checkAtlasPublishable() {
       console.log('[einstein] WARN: no toggle found on page');
     }
 
-    // ---- 2) Agentforce / AI Copilot Setup ----
+    // ---- 2) Agentforce Agents Setup ----
     console.log('\n=== STEP 2/3: Agentforce Setup ===');
-    const afUrl = frontdoor('/lightning/setup/AiCopilotSetup/home');
-    console.log('[goto] AiCopilotSetup');
-    await page.goto(afUrl, { waitUntil: 'domcontentloaded' });
-    await sleep(12000);
+    // AgentforceAgents is the Spring '26 path; AiCopilotSetup redirects and causes nav interrupt
+    const afUrl = frontdoor('/lightning/setup/AgentforceAgents/home');
+    console.log('[goto] AgentforceAgents');
+    // Use networkidle to avoid redirect interrupt, then wait extra
+    try {
+      await page.goto(afUrl, { waitUntil: 'networkidle', timeout: 25000 });
+    } catch (e) {
+      console.log('[agentforce] nav warning (expected redirect):', e.message.slice(0, 80));
+    }
+    await sleep(15000);
     await shot(page, '3-agentforce-initial');
     const af1 = await getToggleState(page);
     console.log('[agentforce] toggle state before:', af1);
