@@ -127,16 +127,21 @@ Si necesitás iniciar un reclamo de garantía, seguí estos pasos:
 
 ## Tabla de plazos y coberturas
 
-| Componente | Cobertura | Plazo | Kilometraje |
-|---|---|---|---|
-| Vehículo general (pintura, suspensión, frenos, eléctrico) | Defectos de fabricación | 4 años | 80.000 km |
-| Batería de alta tensión (≥70% capacidad) | Defectos + degradación prematura | 8 años | 160.000 km |
-| Motor eléctrico y tren motriz | Defectos de fabricación | 8 años | 160.000 km |
-| Cable Type 2 de carga incluido | Defectos de fabricación | 3 años | Sin límite de km |
-| Corrosión perforante de paneles | Defectos de fabricación | 12 años | Sin límite de km |
-| Software y actualizaciones OTA | Incluido sin costo | Durante la vida útil del vehículo | Sin límite de km |
-| Sistema de info-entretenimiento | Defectos de fabricación | 4 años | 80.000 km |
-| Sensores ADAS (AEB, LKA, BSM) | Defectos de fabricación | 4 años | 80.000 km |
+**Cobertura del vehículo general**: el vehículo general incluyendo pintura, suspensión, frenos y sistema eléctrico tiene cobertura de defectos de fabricación por un plazo de 4 años o 80.000 km.
+
+**Cobertura de la batería de alta tensión**: la batería de alta tensión con capacidad mayor o igual al 70 por ciento tiene cobertura de defectos y degradación prematura por un plazo de 8 años o 160.000 km.
+
+**Cobertura del motor eléctrico y tren motriz**: el motor eléctrico y el tren motriz tienen cobertura de defectos de fabricación por un plazo de 8 años o 160.000 km.
+
+**Cobertura del cable Type 2 de carga incluido**: el cable Type 2 de carga incluido tiene cobertura de defectos de fabricación por un plazo de 3 años sin límite de kilometraje.
+
+**Cobertura de corrosión perforante de paneles**: la corrosión perforante de paneles tiene cobertura de defectos de fabricación por un plazo de 12 años sin límite de kilometraje.
+
+**Cobertura de software y actualizaciones OTA**: el software y las actualizaciones OTA están incluidos sin costo durante la vida útil del vehículo sin límite de kilometraje.
+
+**Cobertura del sistema de info-entretenimiento**: el sistema de info-entretenimiento tiene cobertura de defectos de fabricación por un plazo de 4 años o 80.000 km.
+
+**Cobertura de sensores ADAS**: los sensores ADAS incluyendo AEB, LKA y BSM tienen cobertura de defectos de fabricación por un plazo de 4 años o 80.000 km.
 
 **Nota sobre OTA (Over-The-Air updates):** Las actualizaciones de software del vehículo son gratuitas durante toda la vida útil del vehículo. Electra envía actualizaciones de mejora y seguridad vía WiFi/4G sin que tengas que visitar la concesionaria. Las actualizaciones no restablecen ni extienden los plazos de garantía.
 

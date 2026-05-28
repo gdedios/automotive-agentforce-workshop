@@ -10,13 +10,15 @@ En Electra creemos que el futuro de la movilidad ya llegó. Nuestros cinco model
 
 ## Comparación rápida — Encuentra tu Electra ideal
 
-| Modelo | Código | Tipo | Autonomía WLTP | 0-100 km/h | Carga 10-80% | Potencia de carga | Precio (ARS) |
-|--------|--------|------|----------------|------------|--------------|-------------------|--------------|
-| **E-Cruiser** | ECRU | Sedan familiar | 520 km | 6.8 seg | 28 min | 150 kW | $48.000.000 |
-| **E-Sport** | ESPT | Coupé | 480 km | 4.2 seg | 30 min | 150 kW | $58.000.000 |
-| **E-Wagon** | EWGN | Wagon | 510 km | 7.4 seg | 28 min | 150 kW | $46.000.000 |
-| **E-Truck** | ETRK | Pickup | 460 km | 7.0 seg | 35 min | 150 kW | $62.000.000 |
-| **E-City** | ECTY | Hatchback compacto | 360 km | 9.1 seg | 25 min | 100 kW | $32.000.000 |
+**E-Cruiser (ECRU)**: el E-Cruiser es un sedan familiar con código ECRU, tiene una autonomía WLTP de 520 km, acelera de 0 a 100 km/h en 6.8 segundos, carga del 10 al 80 por ciento en 28 minutos con potencia de carga de 150 kW y tiene un precio de $48.000.000 ARS.
+
+**E-Sport (ESPT)**: el E-Sport es un coupé con código ESPT, tiene una autonomía WLTP de 480 km, acelera de 0 a 100 km/h en 4.2 segundos, carga del 10 al 80 por ciento en 30 minutos con potencia de carga de 150 kW y tiene un precio de $58.000.000 ARS.
+
+**E-Wagon (EWGN)**: el E-Wagon es un wagon con código EWGN, tiene una autonomía WLTP de 510 km, acelera de 0 a 100 km/h en 7.4 segundos, carga del 10 al 80 por ciento en 28 minutos con potencia de carga de 150 kW y tiene un precio de $46.000.000 ARS.
+
+**E-Truck (ETRK)**: el E-Truck es una pickup con código ETRK, tiene una autonomía WLTP de 460 km, acelera de 0 a 100 km/h en 7.0 segundos, carga del 10 al 80 por ciento en 35 minutos con potencia de carga de 150 kW y tiene un precio de $62.000.000 ARS.
+
+**E-City (ECTY)**: el E-City es un hatchback compacto con código ECTY, tiene una autonomía WLTP de 360 km, acelera de 0 a 100 km/h en 9.1 segundos, carga del 10 al 80 por ciento en 25 minutos con potencia de carga de 100 kW y tiene un precio de $32.000.000 ARS.
 
 ---
 
@@ -133,18 +135,15 @@ El E-City es el vehículo perfecto para conductores que priorizan la eficiencia 
 
 ## Tabla comparativa de especificaciones completas
 
-| Especificación | E-Cruiser (ECRU) | E-Sport (ESPT) | E-Wagon (EWGN) | E-Truck (ETRK) | E-City (ECTY) |
-|----------------|------------------|----------------|----------------|----------------|---------------|
-| **Tipo de vehículo** | Sedan familiar | Coupé deportivo | Wagon | Pickup | Hatchback compacto |
-| **Puertas** | 4 | 2 | 5 | 4 (cabina doble) | 5 |
-| **Plazas** | 5 | 4 | 5 | 5 | 5 |
-| **Autonomía WLTP** | 520 km | 480 km | 510 km | 460 km | 360 km |
-| **0-100 km/h** | 6.8 seg | 4.2 seg | 7.4 seg | 7.0 seg | 9.1 seg |
-| **Carga 10-80%** | 28 min | 30 min | 28 min | 35 min | 25 min |
-| **Carga DC máx** | 150 kW | 150 kW | 150 kW | 150 kW | 100 kW |
-| **Carga AC máx** | 11 kW | 11 kW | 11 kW | 11 kW | 7.4 kW |
-| **Precio (ARS)** | $48.000.000 | $58.000.000 | $46.000.000 | $62.000.000 | $32.000.000 |
-| **Target de comprador** | Familia premium | Entusiasta deportivo | Familia aventurera | Trabajo/lifestyle | Urbano primera compra |
+**E-Cruiser (ECRU)**: el E-Cruiser es un sedan familiar de 4 puertas con 5 plazas. Tiene una autonomía WLTP de 520 km y acelera de 0 a 100 km/h en 6.8 segundos. Carga del 10 al 80 por ciento en 28 minutos. Su carga DC máxima es de 150 kW y su carga AC máxima es de 11 kW. Su precio es de $48.000.000 ARS. Su target de comprador es la familia premium.
+
+**E-Sport (ESPT)**: el E-Sport es un coupé deportivo de 2 puertas con 4 plazas. Tiene una autonomía WLTP de 480 km y acelera de 0 a 100 km/h en 4.2 segundos. Carga del 10 al 80 por ciento en 30 minutos. Su carga DC máxima es de 150 kW y su carga AC máxima es de 11 kW. Su precio es de $58.000.000 ARS. Su target de comprador es el entusiasta deportivo.
+
+**E-Wagon (EWGN)**: el E-Wagon es un wagon de 5 puertas con 5 plazas. Tiene una autonomía WLTP de 510 km y acelera de 0 a 100 km/h en 7.4 segundos. Carga del 10 al 80 por ciento en 28 minutos. Su carga DC máxima es de 150 kW y su carga AC máxima es de 11 kW. Su precio es de $46.000.000 ARS. Su target de comprador es la familia aventurera.
+
+**E-Truck (ETRK)**: el E-Truck es una pickup de 4 puertas con cabina doble y 5 plazas. Tiene una autonomía WLTP de 460 km y acelera de 0 a 100 km/h en 7.0 segundos. Carga del 10 al 80 por ciento en 35 minutos. Su carga DC máxima es de 150 kW y su carga AC máxima es de 11 kW. Su precio es de $62.000.000 ARS. Su target de comprador es trabajo y lifestyle.
+
+**E-City (ECTY)**: el E-City es un hatchback compacto de 5 puertas con 5 plazas. Tiene una autonomía WLTP de 360 km y acelera de 0 a 100 km/h en 9.1 segundos. Carga del 10 al 80 por ciento en 25 minutos. Su carga DC máxima es de 100 kW y su carga AC máxima es de 7.4 kW. Su precio es de $32.000.000 ARS. Su target de comprador es urbano de primera compra.
 
 ---
 

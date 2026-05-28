@@ -48,7 +48,9 @@ force-app/main/default/bots/
 # compatible with site workspaces"). The Electra portal bundle is tracked in
 # source but excluded from the unlocked-package build. Facilitators deploy the
 # bundle separately via `sf project deploy start` from this repo.
-force-app/main/default/digitalExperiences/
-force-app/main/default/messagingChannels/
-force-app/main/default/EmbeddedServiceConfig/
-force-app/main/default/brandingSets/
+# Phase 7 deploy override: site/MIAW/branding temporarily un-ignored for deploy.
+# Restore after Phase 7 settles AND server-side state matches source.
+# force-app/main/default/digitalExperiences/
+# force-app/main/default/messagingChannels/
+# force-app/main/default/EmbeddedServiceConfig/
+# force-app/main/default/brandingSets/

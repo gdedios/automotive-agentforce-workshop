@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__appPage",
+  "title" : "main",
+  "contentBody" : {
+    "currentThemeId" : "Build_Your_Own_LWR",
+    "headMarkup" : "<!-- Electra Customer MIAW — Embedded Service Deployment snippet -->\n<!-- After activating Electra_Customer_MIAW in Setup → Embedded Service Deployments, -->\n<!-- paste the generated Install Code Snippet here. Language should be 'es' (Spanish). -->\n<!-- This placeholder will be replaced during Phase 7 final MIAW activation. -->\n\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">\n\n<!-- MIAW bootstrap script will go here after org-specific URLs are generated -->",
+    "isLockerServiceEnabled" : true,
+    "isRelaxedCSPLevel" : true,
+    "templateName" : "talon-template-byo"
+  },
+  "urlName" : "main"
+}

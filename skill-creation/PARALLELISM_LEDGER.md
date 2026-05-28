@@ -18,8 +18,8 @@
 | 4.5 | 1 (smoke) | | | | | (pending) |
 | 5 | 1 (sequential — agent authoring) | | | | | (pending) |
 | 6a | 3 (3 PDFs) | | | | | (pending) |
-| 6b | 1 (sequential — Data Library wiring) | | | | | (pending) |
-| 6c | 1 (Opus solo — table-RAG battery) | | | | | (pending) |
+| 6b | 1 (sequential — Data Library wiring) | 0 (Opus drove Builder Commit dance directly) | n/a | n/a | n/a | ✅ correct call — single-threaded Builder UI clicks; AQWK Asset Library modal + commit + activate cannot fan out (one canvas, one user session) |
+| 6c | 1 (Opus solo — table-RAG battery) + 1 Sonnet for prose rewrite | 1 (tables-to-prose, disjoint folder=`data/seed-pdfs/`) | yes (only `*.md` in seed-pdfs) | ~25 min vs Opus rewriting 5 tables across 3 files | none yet (validation: `grep -c "^|"` = 0; numeric spot-check 55 hits preserved) | ✅ clean disjoint fan-out. Sonnet held budget (<5min), strike count 0, validation passed |
 | 7 | 1 (sequential — Experience Cloud + MIAW) | | | | | (pending) |
 | 8 | 1 draft + 5 review | | | | | (pending) |
 | 9 | 5 (per-ejercicio drift) | | | | | (pending) |

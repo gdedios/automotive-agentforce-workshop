@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AiEvaluationDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>ElectraAI Auto Concierge Table-RAG Battery</name>
+    <subjectName>ElectraAI_Auto_Concierge</subjectName>
+    <subjectType>AGENT</subjectType>
+
+    <!-- 10 prompts that target table-format content in 3 PDFs.
+         If &lt; 7 PASS, convert tables to prose, regenerate PDFs, re-upload, re-test. -->
+
+    <testCase>
+        <expectation>
+            <expectedValue>Descubrimiento_de_Vehiculos</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the model spec via Get_Vehicle_Detail OR Knowledge. The exact specification cited must match the source: E-Cruiser autonomy = 520 km WLTP. Agent must NOT fabricate any other figure.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuál es la autonomía WLTP del E-Cruiser?</utterance>
+        </inputs>
+        <number>1</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Descubrimiento_de_Vehiculos</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the model spec via Get_Vehicle_Detail OR Knowledge. E-Sport 0-100 km/h = 4.2 seg. Must match source and not invent another acceleration figure.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuánto tarda el E-Sport en hacer 0 a 100?</utterance>
+        </inputs>
+        <number>2</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the warranty coverage table. Battery (high-voltage) warranty = 8 years OR 160.000 km. Must NOT confuse with general vehicle warranty (4 years / 80.000 km).</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuántos años cubre la garantía de la batería?</utterance>
+        </inputs>
+        <number>3</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the warranty table. General vehicle (paint, suspension, brakes, electrical) warranty = 4 years OR 80.000 km. Must NOT cite the battery 8-year figure here.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuál es la cobertura de la garantía general del vehículo?</utterance>
+        </inputs>
+        <number>4</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the charging table. E-Truck 10-80% fast charge time = 35 min at 150 kW. Must distinguish from other models (which are 25-30 min).</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuánto tarda el E-Truck en cargarse de 10 a 80% en una estación rápida?</utterance>
+        </inputs>
+        <number>5</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the wallbox charging table. E-City wallbox 7 kW charging adds approximately 30 km/h.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>Si cargo el E-City en un wallbox de 7 kW en casa, ¿cuántos km de autonomía gano por hora?</utterance>
+        </inputs>
+        <number>6</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Descubrimiento_de_Vehiculos</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves catalog data via Get_Vehicle_Detail or Knowledge. Cross-row comparison: E-Cruiser autonomy 520 km vs E-City autonomy 360 km. Must report both figures correctly and identify E-Cruiser as the longer-range model.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Qué modelo tiene más autonomía, el E-Cruiser o el E-City?</utterance>
+        </inputs>
+        <number>7</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the maintenance schedule table. First service at 10.000 km is FREE (Gratis) at the dealership in the first year. Must cite "Concesionaria Electra" or equivalent and not fabricate a price.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuánto sale el primer service del auto?</utterance>
+        </inputs>
+        <number>8</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Descubrimiento_de_Vehiculos</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves catalog data via Get_Vehicle_Detail or Knowledge. E-Truck and E-Cruiser fast-charge power = 150 kW. May report uniformly that all models except E-City charge at 150 kW (E-City is 100 kW). Must NOT fabricate a different number.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿Cuál es la potencia máxima de carga rápida del E-Truck?</utterance>
+        </inputs>
+        <number>9</number>
+    </testCase>
+
+    <testCase>
+        <expectation>
+            <expectedValue>Estado_y_FAQ</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>Agent retrieves the corrosion warranty row. Coverage = 12 years, no kilometer limit. Must not confuse with general 4-year warranty.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>¿La garantía cubre corrosión perforante de la carrocería?</utterance>
+        </inputs>
+        <number>10</number>
+    </testCase>
+
+</AiEvaluationDefinition>

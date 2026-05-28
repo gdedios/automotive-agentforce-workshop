@@ -47,9 +47,9 @@ variables:
 		description: "This variable may also be referred to as VerifiedCustomerId"
 
 knowledge:
-	rag_feature_config_id: ""
+	rag_feature_config_id: "ARFPC_1JDgK000007MWZtWAO"
 	citations_url: ""
-	citations_enabled: True
+	citations_enabled: False
 
 start_agent agent_router:
 	label: "Agent Router"
@@ -139,6 +139,13 @@ subagent Descubrimiento_de_Vehiculos:
 				with segmentFilter = ...
 			Get_Vehicle_Detail: @actions.Get_Vehicle_Detail
 				with modelCode = ...
+
+
+
+
+
+
+
 	actions:
 		Get_Vehicle_Catalog:
 			label: "Get Vehicle Catalog"
@@ -157,6 +164,7 @@ subagent Descubrimiento_de_Vehiculos:
 					complex_data_type_name: "lightning__textType"
 					is_displayable: True
 					filter_from_agent: False
+
 		Get_Vehicle_Detail:
 			label: "Get Vehicle Detail"
 			description: "Devolver la ficha técnica completa de un modelo Electra específico por código"
@@ -199,8 +207,13 @@ subagent Prueba_de_Manejo:
 				with dealerCode = ...
 				with requestedDateTime = ...
 				with confirmCreate = ...
-				with leadFirstName = ...
-				with leadLastName = ...
+
+
+
+
+
+
+
 	actions:
 		Schedule_Test_Drive:
 			label: "Schedule Test Drive"
@@ -227,26 +240,16 @@ subagent Prueba_de_Manejo:
 					description: "Código de concesionaria. Debe ser uno de: PALERMO, CORDOBA, ROSARIO. Textual del usuario."
 					is_required: False
 					complex_data_type_name: "lightning__textType"
-				requestedDateTime: string
+				requestedDateTime: object
 					label: "requestedDateTime"
 					description: "Fecha y hora aproximada deseada en formato ISO 8601 (yyyy-MM-ddTHH:mm:ss). Convertir expresiones del usuario tipo 'mañana 10am' o 'sábado a la tarde' a una datetime concreta antes de invocar."
 					is_required: False
-					complex_data_type_name: "lightning__textType"
-				confirmCreate: boolean
+					complex_data_type_name: "lightning__dateTimeStringType"
+				confirmCreate: object
 					label: "confirmCreate"
-					description: "Pasar false en la primera invocación (preview); pasar true SOLO después de que el usuario confirme explícitamente."
+					description: "Pasar False en la primera invocación (preview); pasar True SOLO después de que el usuario confirme explícitamente."
 					is_required: False
 					complex_data_type_name: "lightning__booleanType"
-				leadFirstName: string
-					label: "leadFirstName"
-					description: "Primer nombre del cliente. Derivar de customerName."
-					is_required: False
-					complex_data_type_name: "lightning__textType"
-				leadLastName: string
-					label: "leadLastName"
-					description: "Apellido del cliente. Derivar de customerName."
-					is_required: False
-					complex_data_type_name: "lightning__textType"
 			outputs:
 				confirmation: string
 					label: "confirmation"
@@ -268,21 +271,29 @@ subagent Estado_y_FAQ:
 		Consultar el estado de una prueba de manejo agendada O responder preguntas sobre carga, garantía y mantenimiento usando la Biblioteca de Conocimiento.
 	reasoning:
 		instructions: ->
-			|Este subagent maneja DOS tipos de consulta — distinguilas por intención:
-			 1. ESTADO de prueba de manejo: si el usuario quiere saber cómo va su turno (ya tiene uno agendado), pedir su email y usar {!@actions.Get_Test_Drive_Status}.
-			 2. FAQ informativa: políticas de garantía, tiempos y costos de carga, mantenimiento programado, infraestructura de carga pública. Usar la Biblioteca de Conocimiento.
-			 Para FAQ:
-			 - SIEMPRE citá el documento fuente por nombre cuando esté disponible.
+			|Este subagent maneja DOS tipos de consulta — distinguilas por intención antes de actuar:
+			 RUTA 1 — ESTADO de prueba de manejo: SOLO cuando el usuario menciona explícitamente un turno o cita previa (ej: "mi prueba", "mi turno"). Pedí su email y llamá a {!@actions.Get_Test_Drive_Status}.
+			 RUTA 2 — FAQ informativa: garantía, tiempos y costos de carga, mantenimiento programado, infraestructura de carga pública, especificaciones de modelos no cubiertas por catálogo. Usá {!@actions.AnswerQuestionsWithKnowledge} con la consulta del usuario como query.
+			 Reglas FAQ:
+			 - SIEMPRE llamá a {!@actions.AnswerQuestionsWithKnowledge} antes de responder.
+			 - Citá el documento fuente por nombre cuando esté disponible.
 			 - Ejemplo: "Según la Guía de Carga y Mantenimiento de Electra...".
 			 - Respondé en español rioplatense, tuteo informal.
 			 ANTI-ALUCINACIÓN:
-			 - Si la búsqueda no devuelve contenido relevante, decirlo honestamente.
+			 - Si {!@actions.AnswerQuestionsWithKnowledge} no devuelve contenido relevante, decirlo honestamente.
 			 - Sugerí contactar a una concesionaria (sin teléfono inventado).
 			 - NO fabriques detalles de garantía, tiempos de carga ni costos.
-			 - Si el contenido no menciona un punto, decir que no tenés información sobre eso.
+			 - NUNCA llames a {!@actions.Get_Test_Drive_Status} con un email inventado o con la palabra "FAQ".
 		actions:
 			Get_Test_Drive_Status: @actions.Get_Test_Drive_Status
 				with customerEmail = ...
+			AnswerQuestionsWithKnowledge: @actions.AnswerQuestionsWithKnowledge
+				with query = ...
+				with citationsUrl = ...
+				with ragFeatureConfigId = ...
+				with citationsEnabled = ...
+
+
 	actions:
 		Get_Test_Drive_Status:
 			label: "Get Test Drive Status"
@@ -301,3 +312,54 @@ subagent Estado_y_FAQ:
 					complex_data_type_name: "lightning__textType"
 					is_displayable: True
 					filter_from_agent: False
+		AnswerQuestionsWithKnowledge:
+			description: |
+				Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”
+			label: "Answer Questions with Knowledge"
+			require_user_confirmation: False
+			include_in_progress_indicator: True
+			progress_indicator_message: "Getting answers"
+			source: "EmployeeCopilot__AnswerQuestionsWithKnowledge"
+			target: "standardInvocableAction://streamKnowledgeSearch"
+				
+			inputs:
+				"query": string
+					description: |
+					  Required. A string created by generative AI to be used in the knowledge article search.
+					label: "Query"
+					is_required: True
+					is_user_input: True
+				"citationsUrl": string=@knowledge.citations_url
+					description: |
+					  The URL to use for citations for custom Agents.
+					label: "Citations Url"
+					is_required: False
+					is_user_input: True
+				"ragFeatureConfigId": string=@knowledge.rag_feature_config_id
+					description: |
+					  The RAG Feature ID to use for grounding this copilot action invocation.
+					label: "RAG Feature Configuration Id"
+					is_required: False
+					is_user_input: True
+				"citationsEnabled": boolean=@knowledge.citations_enabled
+					description: |
+					  Whether or not citations are enabled.
+					label: "Citations Enabled"
+					is_required: False
+					is_user_input: True
+				
+			outputs:
+				"knowledgeSummary": object
+					description: |
+					  A string formatted as rich text that includes a summary of the information retrieved from the knowledge articles and citations to those articles.
+					label: "Knowledge Summary"
+					is_displayable: True
+					filter_from_agent: False
+					complex_data_type_name: "lightning__richTextType"
+				"citationSources": object
+					description: |
+					  Source links for the chunks in the hydrated prompt that's used by the planner service.
+					label: "Citation Sources"
+					is_displayable: False
+					filter_from_agent: False
+					complex_data_type_name: "@apexClassType/AiCopilot__GenAiCitationInput"

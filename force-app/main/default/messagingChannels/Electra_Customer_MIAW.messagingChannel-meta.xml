@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <language>es</language>
+        <response>Recibimos tu solicitud de baja. No te volveremos a contactar.</response>
+        <type>OptOutConfirmation</type>
+    </automatedResponses>
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <language>es</language>
+        <response>Enviá STOP para darte de baja.</response>
+        <type>HelpResponse</type>
+    </automatedResponses>
+    <masterLabel>Electra Customer MIAW</masterLabel>
+    <messagingChannelType>EmbeddedMessaging</messagingChannelType>
+    <messagingKeywords>
+        <keyword>baja</keyword>
+        <keyword>cancelar</keyword>
+        <keyword>fin</keyword>
+        <keyword>parar</keyword>
+        <keyword>salir</keyword>
+        <keyword>terminar</keyword>
+        <keywordType>OptOut</keywordType>
+        <language>es</language>
+    </messagingKeywords>
+    <messagingKeywords>
+        <keyword>ayuda</keyword>
+        <keywordType>Help</keywordType>
+        <language>es</language>
+    </messagingKeywords>
+    <sessionHandlerAsa>ElectraAI_Auto_Concierge</sessionHandlerAsa>
+    <sessionHandlerQueue>Unqualified_Leads</sessionHandlerQueue>
+    <sessionHandlerType>AgentforceServiceAgent</sessionHandlerType>
+</MessagingChannel>

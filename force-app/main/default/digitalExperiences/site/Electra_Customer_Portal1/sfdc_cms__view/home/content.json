@@ -1,0 +1,112 @@
+{
+  "type": "sfdc_cms__view",
+  "title": "Home",
+  "contentBody": {
+    "component": {
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "backgroundImageConfig": "",
+                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                "componentSpacerSize": "0rem",
+                "dxpStyle": {},
+                "layoutDirectionDesktop": "row",
+                "layoutDirectionMobile": "column",
+                "layoutDirectionTablet": "column",
+                "maxContentWidth": "",
+                "sectionColumnGutterWidth": "0rem",
+                "sectionConfig": "{\"UUID\":\"03aa9d3d-29e9-4404-8d95-5b9092893c6c\",\"columns\":[{\"UUID\":\"efe93f9f-390b-4b41-a99a-79a85f5b5607\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+                "sectionMinHeight": "",
+                "sectionVerticalAlign": "center"
+              },
+              "children": [
+                {
+                  "children": [
+                    {
+                      "attributes": {
+                        "dxpStyle": {},
+                        "imageInfos": "",
+                        "richTextValue": "<!-- ===== Electra Customer Portal \u2014 homepage HTML block =====\n     ALL styles inline (style=\"...\" attributes). LWR htmlEditor strips <style>\n     tags via sanitization, but inline style attributes survive. Electra\n     brand palette (Purple #4723EB, Charcoal #393942, Light #F0EBFD,\n     Black #050516, Purple Dark #261089). Argentine-Spanish portal.\n============================================================================ -->\n\n<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #393942; line-height: 1.55; max-width: 1200px; margin: 0 auto; padding: 0 24px;\">\n\n  <div style=\"display: flex; align-items: center; justify-content: space-between; padding: 28px 0 24px; border-bottom: 1px solid #E5E5E5; flex-wrap: wrap; gap: 16px;\">\n    <div style=\"display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; color: #050516;\">\n      <span style=\"width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #4723EB 0%, #261089 100%); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 18px; box-shadow: 0 2px 6px rgba(71,35,235,0.25);\">E</span>\n      <span>ELECTRA</span>\n    </div>\n    <div style=\"display: flex; gap: 28px; font-size: 14px; font-weight: 500;\">\n      <a href=\"#modelos\" style=\"color: #4A4A4A; text-decoration: none;\">Modelos</a>\n      <a href=\"#concesionarias\" style=\"color: #4A4A4A; text-decoration: none;\">Concesionarias</a>\n      <a href=\"#prueba\" style=\"color: #4A4A4A; text-decoration: none;\">Prueba de Manejo</a>\n      <a href=\"#sostenibilidad\" style=\"color: #4A4A4A; text-decoration: none;\">Sostenibilidad</a>\n      <a href=\"#contacto\" style=\"color: #4A4A4A; text-decoration: none;\">Contacto</a>\n    </div>\n  </div>\n\n  <div style=\"background: linear-gradient(135deg, #4723EB 0%, #261089 60%, #050516 130%); border-radius: 16px; padding: 64px 56px; margin-top: 32px; color: #fff; box-shadow: 0 8px 28px rgba(71,35,235,0.18);\">\n    <p style=\"font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; margin: 0 0 14px; color: #fff;\">El Futuro es El\u00e9ctrico</p>\n    <h1 style=\"font-size: 42px; line-height: 1.15; font-weight: 700; margin: 0 0 18px; max-width: 780px; letter-spacing: -0.015em; color: #fff;\">Tu pr\u00f3ximo auto el\u00e9ctrico te espera.</h1>\n    <p style=\"font-size: 18px; max-width: 680px; margin: 0 0 28px; opacity: 0.94; color: #fff;\">Descubr\u00ed nuestra gama de veh\u00edculos el\u00e9ctricos, agendar tu prueba de manejo y resolv\u00e9 todas tus dudas con ElectraAI Auto Concierge, tu asistente virtual las 24 horas.</p>\n    <a href=\"#chat\" style=\"display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #4723EB; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,0.12);\">Hablar con ElectraAI \u2192</a>\n  </div>\n\n  <div style=\"display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 56px 0;\">\n    <div style=\"background: #fff; border: 1px solid #E5E5E5; border-radius: 12px; padding: 32px 28px;\">\n      <div style=\"width: 48px; height: 48px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 24px; background: #F0EBFD; color: #4723EB;\">\ud83d\ude97</div>\n      <h3 style=\"font-size: 20px; font-weight: 700; margin: 0 0 10px; color: #050516;\">Cat\u00e1logo de Veh\u00edculos</h3>\n      <p style=\"font-size: 15px; color: #555; margin: 0;\">Explor\u00e1 nuestros modelos E-Cruiser, E-Sport, E-Wagon, E-Truck y E-City. Desde sedanes familiares hasta pickups, todos 100% el\u00e9ctricos.</p>\n    </div>\n    <div style=\"background: #fff; border: 1px solid #E5E5E5; border-radius: 12px; padding: 32px 28px;\">\n      <div style=\"width: 48px; height: 48px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 24px; background: #F0EBFD; color: #261089;\">\u26a1</div>\n      <h3 style=\"font-size: 20px; font-weight: 700; margin: 0 0 10px; color: #050516;\">Garant\u00eda y Carga</h3>\n      <p style=\"font-size: 15px; color: #555; margin: 0;\">Conoce los detalles de nuestra garant\u00eda extendida, la red de carga YPF Ruta + Edenor y tiempos de carga para cada modelo.</p>\n    </div>\n    <div style=\"background: #fff; border: 1px solid #E5E5E5; border-radius: 12px; padding: 32px 28px;\">\n      <div style=\"width: 48px; height: 48px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 24px; background: #F0EBFD; color: #4723EB;\">\ud83d\udccd</div>\n      <h3 style=\"font-size: 20px; font-weight: 700; margin: 0 0 10px; color: #050516;\">Pruebas de Manejo</h3>\n      <p style=\"font-size: 15px; color: #555; margin: 0;\">Agenda tu prueba de manejo en Palermo, C\u00f3rdoba o Rosario. Turnos disponibles de lunes a s\u00e1bado en cada concesionaria.</p>\n    </div>\n  </div>\n\n  <div style=\"background: #F0EBFD; border-radius: 12px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 56px; gap: 24px; flex-wrap: wrap;\">\n    <div>\n      <strong style=\"display: block; font-size: 18px; font-weight: 700; color: #050516; margin-bottom: 4px;\">\u00bfTen\u00e9s alguna consulta?</strong>\n      <span style=\"font-size: 14px; color: #555;\">Inici\u00e1 una conversaci\u00f3n con ElectraAI Auto Concierge en el chat de la esquina inferior derecha.</span>\n    </div>\n    <span style=\"background: #4723EB; color: #fff; padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;\">\u26a1 Disponible 24/7</span>\n  </div>\n\n  <div style=\"border-top: 1px solid #E5E5E5; padding: 36px 0 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px;\">\n    <div style=\"font-size: 14px; color: #555; line-height: 1.6;\">\n      <strong style=\"display: block; color: #050516; font-size: 16px; margin-bottom: 8px;\">ELECTRA</strong>\n      Veh\u00edculos el\u00e9ctricos premium para la movilidad del futuro. Dise\u00f1ados en Argentina, pensados para tu estilo de vida. Tres concesionarias en Buenos Aires, C\u00f3rdoba y Rosario.\n    </div>\n    <div>\n      <h4 style=\"font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #050516; margin: 0 0 12px;\">Modelos</h4>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">E-Cruiser</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">E-Sport</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">E-Wagon</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">E-Truck</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">E-City</a>\n    </div>\n    <div>\n      <h4 style=\"font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #050516; margin: 0 0 12px;\">Servicios</h4>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Prueba de Manejo</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Financiaci\u00f3n</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Concesionarias</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Garant\u00eda</a>\n    </div>\n    <div>\n      <h4 style=\"font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #050516; margin: 0 0 12px;\">Compa\u00f1\u00eda</h4>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Qui\u00e9nes Somos</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Sostenibilidad</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Prensa</a>\n      <a href=\"#\" style=\"display: block; color: #555; font-size: 14px; text-decoration: none; padding: 4px 0;\">Trabaj\u00e1 con nosotros</a>\n    </div>\n    <div style=\"grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid #E5E5E5; font-size: 12px; color: #888; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 16px;\">\n      <span>\u00a9 2026 Electra Argentina S.A. Todos los derechos reservados.</span>\n      <span>T\u00e9rminos \u00b7 Privacidad \u00b7 Pol\u00edtica de Cookies</span>\n    </div>\n  </div>\n\n</div>\n"
+                      },
+                      "definition": "community_builder:htmlEditor",
+                      "id": "e57b3de4-2897-4c1d-ad25-3ae3d90139a4",
+                      "type": "component"
+                    }
+                  ],
+                  "id": "efe93f9f-390b-4b41-a99a-79a85f5b5607",
+                  "name": "col1",
+                  "title": "Column 1",
+                  "type": "region"
+                }
+              ],
+              "definition": "community_layout:section",
+              "id": "03aa9d3d-29e9-4404-8d95-5b9092893c6c",
+              "type": "component"
+            },
+            {
+              "attributes": {
+                "backgroundImageConfig": "",
+                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                "componentSpacerSize": "",
+                "dxpStyle": {},
+                "layoutDirectionDesktop": "row",
+                "layoutDirectionMobile": "column",
+                "layoutDirectionTablet": "column",
+                "maxContentWidth": "",
+                "sectionColumnGutterWidth": "",
+                "sectionConfig": "{\"UUID\":\"5fa87945-bc76-4df2-a9ed-ec6164b3270d\",\"columns\":[{\"UUID\":\"042ebe69-cc5c-4d7b-b16c-f8af0bfd99a4\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+                "sectionMinHeight": "",
+                "sectionVerticalAlign": "flex-start"
+              },
+              "children": [
+                {
+                  "children": [],
+                  "id": "042ebe69-cc5c-4d7b-b16c-f8af0bfd99a4",
+                  "name": "col1",
+                  "title": "Column 1",
+                  "type": "region"
+                }
+              ],
+              "definition": "community_layout:section",
+              "id": "5fa87945-bc76-4df2-a9ed-ec6164b3270d",
+              "type": "component"
+            }
+          ],
+          "id": "5312693a-89be-400c-8a8c-b5d3611aa5ab",
+          "name": "content",
+          "title": "Content",
+          "type": "region"
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "customHeadTags": "",
+                "description": "",
+                "dxpStyle": {},
+                "pageTitle": "Home",
+                "recordId": "{!recordId}"
+              },
+              "definition": "community_builder:seoAssistant",
+              "id": "6e5c5816-7b73-439b-aa6b-a7a8dda602c0",
+              "type": "component"
+            }
+          ],
+          "id": "ebae9b6c-2b6f-4314-8efe-78adbb2f8973",
+          "name": "sfdcHiddenRegion",
+          "title": "sfdcHiddenRegion",
+          "type": "region"
+        }
+      ],
+      "definition": "community_layout:sldsFlexibleLayout",
+      "id": "d8c5a91f-e6fa-4f33-99ce-806dc0b935c9",
+      "type": "component"
+    },
+    "dataProviders": [],
+    "themeLayoutType": "Inner",
+    "viewType": "home"
+  },
+  "urlName": "home"
+}

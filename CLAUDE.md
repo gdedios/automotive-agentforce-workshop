@@ -37,6 +37,7 @@ Opus is the only orchestrator and the only committer. Sonnet subagents author fi
 5. **Opus never trusts a subagent summary.** Before declaring success, Opus runs `git diff --stat` and reads the actual XML/`.cls`/`.flow-meta.xml`.
 6. **Compression discipline.** Before every Opus→Sonnet handoff and at every model switch, the outgoing model writes a `<2KB` `docs/COMPRESSION_phaseN_to_phaseN+1.md` capturing alias, IDs, decisions, and any `[SKILL-CANDIDATE]` lines. Then Opus runs `/compact` with a phase-targeted instruction so the next session picks up cold from a curated brief.
 7. **Sequential single-thread phases.** Phase 5 (agent authoring), Phase 6b (Data Library wiring), Phase 7 (Experience Cloud + MIAW) are **never fanned out**. They are sequential UI-click-heavy work. The `@knowledge.rag_feature_config_id` AQWK gotcha and the LWR/MIAW publish dance both demand single-threading.
+8. **Phase 6b ADL creation is a USER MANUAL STEP, not Playwright.** Never automate Agentforce Data Library creation + first upload. Two consecutive libraries failed with "We couldn't upload your file" via Playwright; the same flow done by hand worked first try. See `docs/MANUAL_STEP_create_data_library.md` for the canonical step block + naming. Claude polls Status post-creation and drives the AQWK Commit dance in NEW Builder, but does NOT script the library creation itself. Same rule applies to future workshops.
 
 ### Subagent prompt skeleton
 

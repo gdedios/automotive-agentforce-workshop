@@ -93,13 +93,15 @@ Sin embargo, recomendamos hacer una parada estratégica en **Pilar** (km 60) o *
 
 La siguiente tabla muestra los tiempos de carga en diferentes escenarios para cada modelo Electra:
 
-| Modelo       | Autonomía WLTP | Tiempo 10–80 % (cargador rápido 150 kW) | km por hora (wallbox 7 kW) |
-|--------------|----------------|-----------------------------------------|---------------------------|
-| E-Cruiser    | 520 km         | 28 min                                  | ~40 km/h                  |
-| E-Sport      | 480 km         | 30 min                                  | ~38 km/h                  |
-| E-Wagon      | 510 km         | 28 min                                  | ~39 km/h                  |
-| E-Truck      | 460 km         | 35 min                                  | ~35 km/h                  |
-| E-City       | 360 km         | 25 min                                  | ~30 km/h                  |
+**E-Cruiser**: el E-Cruiser tiene una autonomía WLTP de 520 km. Su tiempo de carga del 10 al 80 por ciento con un cargador rápido de 150 kW es de 28 minutos. Con un wallbox de 7 kW carga aproximadamente 40 km por hora.
+
+**E-Sport**: el E-Sport tiene una autonomía WLTP de 480 km. Su tiempo de carga del 10 al 80 por ciento con un cargador rápido de 150 kW es de 30 minutos. Con un wallbox de 7 kW carga aproximadamente 38 km por hora.
+
+**E-Wagon**: el E-Wagon tiene una autonomía WLTP de 510 km. Su tiempo de carga del 10 al 80 por ciento con un cargador rápido de 150 kW es de 28 minutos. Con un wallbox de 7 kW carga aproximadamente 39 km por hora.
+
+**E-Truck**: el E-Truck tiene una autonomía WLTP de 460 km. Su tiempo de carga del 10 al 80 por ciento con un cargador rápido de 150 kW es de 35 minutos. Con un wallbox de 7 kW carga aproximadamente 35 km por hora.
+
+**E-City**: el E-City tiene una autonomía WLTP de 360 km. Su tiempo de carga del 10 al 80 por ciento con un cargador rápido de 150 kW es de 25 minutos. Con un wallbox de 7 kW carga aproximadamente 30 km por hora.
 
 **Nota:** Los tiempos de carga rápida (10–80 %) son estimados en condiciones óptimas (batería entre 15 °C y 35 °C, cargador funcionando a plena potencia). En climas muy fríos (< 5 °C) o muy calientes (> 40 °C), la velocidad de carga puede reducirse automáticamente para proteger la batería.
 
@@ -111,12 +113,13 @@ Una de las grandes ventajas de conducir un Electra es la **reducción drástica 
 
 ### Calendario de servicios recomendados
 
-| Kilometraje | Servicio incluido                                              | Lugar                    | Costo aprox.        |
-|-------------|----------------------------------------------------------------|--------------------------|---------------------|
-| 10,000 km   | Rotación de neumáticos, inspección frenos, actualización OTA   | Concesionaria Electra    | **Gratis** (primer año) |
-| 30,000 km   | Cambio líquido de frenos, inspección suspensión, software      | Concesionaria Electra    | $25,000–35,000 ARS  |
-| 60,000 km   | Filtro de habitáculo, cambio plumas, inspección dirección      | Concesionaria Electra    | $18,000–25,000 ARS  |
-| 100,000 km  | Inspección batería de tracción, motor, tren de dirección       | Concesionaria Electra    | $45,000–60,000 ARS  |
+**Servicio a los 10.000 km**: el servicio a los 10.000 km incluye rotación de neumáticos, inspección de frenos y actualización OTA. Se realiza en la concesionaria Electra y es gratis en el primer año.
+
+**Servicio a los 30.000 km**: el servicio a los 30.000 km incluye cambio de líquido de frenos, inspección de suspensión y actualización de software. Se realiza en la concesionaria Electra y tiene un costo aproximado de $25.000 a $35.000 ARS.
+
+**Servicio a los 60.000 km**: el servicio a los 60.000 km incluye cambio de filtro de habitáculo, cambio de plumas e inspección de dirección. Se realiza en la concesionaria Electra y tiene un costo aproximado de $18.000 a $25.000 ARS.
+
+**Servicio a los 100.000 km**: el servicio a los 100.000 km incluye inspección de batería de tracción, motor y tren de dirección. Se realiza en la concesionaria Electra y tiene un costo aproximado de $45.000 a $60.000 ARS.
 
 **Primer año sin cargo:** todos los servicios programados durante el primer año o los primeros 15,000 km (lo que ocurra primero) están cubiertos sin costo para el comprador del vehículo nuevo. Esto incluye rotaciones, inspecciones y actualizaciones de software.
 
