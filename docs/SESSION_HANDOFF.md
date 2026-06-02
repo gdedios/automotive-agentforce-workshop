@@ -158,8 +158,8 @@ From Phase 9 drift (see `docs/GUIA_DRIFT.md` for full context):
 ## Open threads
 
 - **Ejercicio 4 Experience Cloud drift:** verified on a contaminated merchant-template org (OrgId `00DgK00000Ox4o9UAB`, 94 pre-existing custom objects). Must re-verify the Ej 4 site install + MIAW flow on a CLEAN Agentforce-NOW OrgFarm trial before considering it student-ready. The LWR + MIAW deployment mechanics are org-independent, but the guide's step wording may need refinement post-clean-org test.
-- **Build-org alias cleanup:** `Electra_Auto` (OrgId `00DgK00000Q8aKJUAZ`) — the primary build/demo org. Phase 12 will wipe this alias with `sf org logout --no-prompt -o Electra_Auto`.
-- **Drift-org alias cleanup:** `Electra_Auto_Drift` (OrgId `00DgK00000Ox4o9UAB`) — the Phase 9 drift validation org. Phase 12 will wipe this alias as well.
+- **Drift-org alias:** `Electra_Auto_Drift` (OrgId `00DgK00000Ox4o9UAB`) — ✅ WIPED in Phase 12 (`sf org logout --no-prompt -o Electra_Auto_Drift`, 2026-06-02). Contaminated throwaway, no longer needed.
+- **Build-org alias — DEFERRED wipe:** `Electra_Auto` (OrgId `00DgK00000Q8aKJUAZ`, `epic.c6fb0dbb14e4@orgfarm.salesforce.com`) — KEPT connected because it hosts the live demo (published agent + Customer Portal site). When you're done demoing, wipe with `sf org logout --no-prompt -o Electra_Auto`. The org itself survives logout (creds re-authable); logout only removes local CLI access.
 - **Guide corrections:** DRIFT-0.1, DRIFT-0.2, DRIFT-2.2 ✅ all fixed in commit `5f0de53`; PDF re-exported (27pp).
 - **Seeder inventory gap:** ✅ RESOLVED — seeder now creates 15 `Vehicle_Inventory__c` rows (3 dealers × 5 models, quantities 2–8); test asserts 15. The Vehicle Inventory tab is no longer empty post-seed.
 
