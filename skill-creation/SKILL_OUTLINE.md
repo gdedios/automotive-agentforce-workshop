@@ -87,13 +87,19 @@ The skill auto-loads (or is `/create-industry-workshop`-invoked) when:
 - **Not an oracle.** It does not predict which 3 topics + 4 actions a given industry needs; the interview surfaces that.
 - **Not a deployment tool.** It does not run `sf project deploy`; Opus does that.
 
-## Open design questions (resolve during Phase 11)
+## Open design questions — RESOLVED (Phase 11)
 
-- Should the skill bundle `kenton-snapshot.md` and `electra-snapshot.md` as references, or just point at the project paths?
-- Should the brand file template be a **schema** (markdown headings) or a **filled-in example** (Electra-as-template)?
-- Should the parallelism ledger be a separate doc or inlined into `workflow.md`?
-- Does the skill need to know about non-Atlas orgs (CDO, plain Einstein-Bots) explicitly, or just gate-fail with a clear message?
+- **Bundle snapshots or point at paths?** → **Bundle** 1-page `kenton-snapshot.md` + `electra-snapshot.md` as references. Project paths rot (orgs get wiped, folders archived); a self-contained skill survives.
+- **Brand template: schema or filled example?** → **Both.** `BRAND_FILE_TEMPLATE.md` is the schema (headings + what goes in each); ship the Electra brand file as a filled reference alongside it. New users copy the schema, learn from the example.
+- **Parallelism ledger separate or inlined?** → **Separate.** It's a decision-support table consulted at each phase boundary; inlining bloats `workflow.md`. Keep `parallelism-ledger.md` standalone, cross-link from workflow.
+- **Non-Atlas orgs: explicit handling or gate-fail?** → **Gate-fail with a clear, actionable message.** The skill should detect `INVALID_TYPE: AiAuthoringBundle`, then check whether it's a toggle-off (recoverable: enable Einstein+Agentforce) vs a wrong-template (reject). Two distinct messages. Don't try to support CDO/Einstein-Bots orgs.
 
-## Confidence today (Phase 0)
+## NEW design decisions from the Electra build (add to SKILL.md)
 
-Low. This outline is a hypothesis. Phases 1–10 will validate or invalidate every section. Phase 11 is where the hypothesis becomes a real skill — or gets revised heavily.
+- **Add a Section 0: "drift = contract test first."** Before any Playwright, the skill should `curl` every external URL the guide cites + grep guide API names vs flow XML + run anon-Apex `Flow.Interview` against seeded data. This single pass caught the highest-severity defects in Electra.
+- **Subagent task-size guardrail belongs in the SKILL body.** Codify "≤3 min per subagent so the orchestrator stays in the loop" as a hard rule, not a nicety. It's the difference between Opus steering and Opus waiting.
+- **Three-tier model routing** (Opus orchestrate/check/deploy · Sonnet author/drive-browser · Haiku read-screenshots-and-transcribe) is a first-class part of the skill, not an afterthought.
+
+## Confidence after the Electra build (Phase 11)
+
+**High** on the choreography, the disjoint-folder fan-out contract, the compression-doc handoff, and the model-routing rules — all validated across 12 phases on a real build. **Medium** on the Phase 7 (Experience Cloud) and Phase 9 (drift) shapes — Ej4 was never verified on a truly clean org, and Phase 9 deviated from plan (collapsed to sequential contract tests, which turned out better). The next build should treat Phase 7/9 as the areas most likely to need adaptation. The outline is now a buildable skill, not a hypothesis.

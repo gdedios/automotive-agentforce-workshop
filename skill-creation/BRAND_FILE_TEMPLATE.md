@@ -87,8 +87,16 @@ Explicit list of what was deliberately omitted (raw source markup, stock images,
 5. Validate against the field-level checklist above
 6. Confirm the file is self-contained — i.e., `/compact` can drop the source artifacts without losing fidelity
 
-## Lessons from filling Electra's (populate as we go)
+## Lessons from filling Electra's (harvested Phase 11)
 
-<!-- Phase 0 — drafted from Slack canvas + Slides; what was easy/hard? -->
-<!-- Phase 1+ — what brand decisions surfaced AFTER the file was "done"? -->
-<!-- Phase 11 — what schema fields would I add if I were starting over? -->
+- **Phase 0 — drafting from Slack canvas + Slides:** the durable-brand-file move paid off exactly as intended. After Phase 0, `docs/ELECTRA_BRAND.md` was self-contained enough that every subsequent `/compact` safely dropped the Slack/Slides sources without losing fidelity. Easy: colors, personas, voice. Hard: pinning the EXACT welcome/off-topic messages — these turned out load-bearing (the agent's actual welcome drifted from the canonical, caught in drift). **Add an explicit "verbatim agent messages" field.**
+- **Brand decisions that surfaced AFTER the file was "done":**
+  - The **exact agent welcome + off-topic strings** belong in the brand file as verbatim canonicals, not paraphrases — the GLOSSARY ended up carrying them because the brand file didn't. Promote them.
+  - **Currency formatting** ("ARS 48.000.000" vs "$48,000,000") is a brand/locale decision that silently varied between the seeder, the flows, and the guide. Add a "number/currency/date formatting" field.
+  - **Which UI labels stay in English** (Setup, App Launcher, Agentforce Studio…) vs translated is a brand-voice decision worth pinning once, centrally. The GLOSSARY carried this; the brand file should own the rule and the GLOSSARY just the list.
+- **Phase 11 — schema fields I'd add if starting over:**
+  1. **Verbatim agent strings** (welcome, error, off-topic, escalation) — quoted exactly.
+  2. **Formatting conventions** (currency, dates, units, phone) for the locale.
+  3. **UI-label translation policy** (which English terms stay English) — one rule + a short list.
+  4. **Knowledge-asset inventory** (the FAQ/PDF source files + their single source of truth for the install) — would have pre-empted the GitHub-404 drift.
+  5. **Sentinel/idempotency values** the seeder keys on (e.g., dealer code `PALERMO`) — so the reset and seeder stay in sync as a documented contract.

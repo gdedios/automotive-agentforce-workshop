@@ -62,6 +62,13 @@ The interview happens at the start of every new industry workshop build. Goal: l
 
 ---
 
-## Questions accumulated during the Electra build (append as we hit them)
+## Questions accumulated during the Electra build (the gold for the skill)
 
-<!-- Add here whenever we say "we should have asked this upfront" — these are the gold for the skill -->
+Each of these is a "we should have asked this upfront" moment. Fold them into the numbered sections above for the next build.
+
+- **[→ §4 Org base] "Will you provide a SECOND fresh org for Phase 9 drift, distinct from the technical-build org?"** We discovered at Phase 9 we needed a clean org for drift, but the only spare was a contaminated merchant template. Plan a tech-build org (residuals OK) + a visual-verify/drift org (fresh orgfarm) from Phase 0. The build org and drift org should never be the same alias.
+- **[→ §2 Use case] "Will the agent need to create Calendar Events, or can it use a custom record type / Lead status field?"** `Event` is fragile in fresh Atlas trials. Default to custom-object + Lead-status modeling; only reach for `Event` if the demo specifically needs calendar integration.
+- **[→ §4 Org base] "Is the org Atlas-CAPABLE or Atlas-ENABLED?"** Capable = `AiAuthoringBundle` metadata retrievable. Enabled = Einstein + Agentforce toggled ON in Setup (publish API 404s otherwise). Always confirm BOTH; enabling is the student's Ejercicio 1 but the facilitator must do it on any demo org.
+- **[→ §3 Surface] "Are the FAQ/knowledge source files hosted anywhere the student must fetch, or shipped with the install?"** The Electra guide referenced GitHub raw URLs that 404'd; the installer already uploaded the PDFs to Files. Decide ONE source of truth for knowledge assets (prefer: installer uploads them; guide just verifies presence). Never make the student download from an external URL mid-workshop.
+- **[→ §5 Schedule] "How should Phase 9 drift be validated — UI walkthrough or contract tests?"** Default to contract tests (static URL/API-name checks + anon-Apex `Flow.Interview` against seeded data) FIRST; reserve Playwright UI capture for genuinely UI-only steps. The highest-severity bugs are usually contract drift, not UI-label drift.
+- **[→ §1 Brand] "Confirm the public GitHub repo NAME, exactly, if the guide will link to it."** The guide linked `gdedios/automotive-workshop` but the real repo is `gdedios/automotive-agentforce-workshop`. If any guide URL points at a repo, verify it resolves with `curl` before shipping.

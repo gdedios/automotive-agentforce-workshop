@@ -21,6 +21,11 @@ A task should run on **Opus 4.7** when ANY of these hold:
 - The task is auditing + accepting subagent output
 - The task is the AQWK Builder commit dance (UI-click sequence with branching error recovery)
 
+A task should run on **Haiku 4.5** when:
+- The task is pure perception + transcription: read screenshot(s), extract the visible text/labels/state, hand the text to the next step
+- No judgment, no authoring, no branching — just "what does this image say"
+- (Added during Electra build per user routing directive: Opus reserved for checking/intervention; Haiku for cheap screenshot-read → text handoff; Sonnet for authoring/Playwright-driving.)
+
 A task should use **`adlc-orchestrator`** subagent when:
 - The task is full agent authoring (Phase 5) — the subagent auto-loads `developing-agentforce`, `sf-ai-agentscript`, `testing-agentforce`
 - The task is `aiEvaluationDefinition` authoring — same skill bundle applies
@@ -55,32 +60,32 @@ A task should NOT be subagent-fanned-out when:
 | `sf project deploy start` | Opus | Sequential, single-threaded — never delegated |
 | `sf agent publish` + `sf agent activate` | Opus | Branching recovery (AQWK ComponentSetError) |
 | `sf community publish` | Opus | One-shot but UI-state-dependent verification follows |
-| Headless Chrome screenshot capture | Sonnet ▶︎N | Per-ejercicio Playwright runs; pure capture, not judgment |
+| Headless Chrome screenshot CAPTURE / Playwright driving | Sonnet ▶︎N | Per-ejercicio runs; authoring the script + driving the browser |
+| Screenshot READING / label transcription | Haiku | Pure perception → text handoff; no judgment |
 | Drift-to-Guía-rewrite | Opus | Spanish prose + UI-label coherence |
+| Anon-Apex `Flow.Interview` contract test authoring | Sonnet | Bounded; Opus reviews assertions vs guide |
 
 ---
 
-## Boundaries we expect to refine (populate as we hit them)
+## Boundaries — RESOLVED during the Electra build
 
-### Spanish-prose threshold
-- **Question:** is the threshold `>300 words` correct? Maybe `>100 words of register-sensitive prose`?
-- **Resolve in:** Phase 8 (Guía drafting) when we measure Sonnet vs Opus output quality on identical prompts
+### Spanish-prose threshold → CONFIRMED useful, but split the work
+- **Resolution:** Phase 8 worked best as **Opus drafts, Sonnet reviews per-section** — NOT Sonnet drafts. Sonnet review held register fine *when given STYLE_GUIDE + GLOSSARY as inputs*. So the rule is less about a word count and more about role: Opus owns first-draft register/voice; Sonnet owns bounded tightening against a canonical. The `>300 words` heuristic is a fine trigger for "Opus drafts."
 
-### Multi-file invariant tasks
-- **Question:** can Sonnet handle a 3-file invariant (e.g., flow + permset + app) if we give it explicit invariants in the prompt?
-- **Resolve in:** Phase 2 — try giving Sonnet the invariants; check Opus diff-audit catch rate
+### Multi-file invariant tasks → keep with Opus; subagents author single folders
+- **Resolution:** the winning pattern is subagents author DISJOINT single folders, Opus owns every cross-file invariant (`package.xml` order, deploy sequence). Phase 10's 3-way fan-out proved disjoint-folder Sonnet works with zero clobber; the moment a task spans the invariant (the manifest), it's Opus. Don't hand a 3-file invariant to one Sonnet.
 
-### `adlc-orchestrator` fit
-- **Question:** is `adlc-orchestrator` strictly better than Opus-direct for Phase 5? Or is it equivalent?
-- **Resolve in:** Phase 5 itself — try both on the same canonical prompt set and compare
+### `adlc-orchestrator` fit → useful for agent authoring; Opus-direct also fine
+- **Resolution:** both work. For Phase 5 the deciding factor was the AQWK `@knowledge.rag_feature_config_id` gotcha, which needed Opus-level branching recovery regardless. Treat `adlc-orchestrator` as a convenience (auto-loads the agent skills), not a requirement.
 
-### Drift fan-out parallelism ceiling
-- **Question:** is 5 parallel Sonnets (one per ejercicio) sustainable? Or does Chrome resource contention force `<= 3`?
-- **Resolve in:** Phase 9 — actual measurement on the actual Mac
+### Drift fan-out parallelism ceiling → MOOT; drift collapsed to sequential
+- **Resolution:** Phase 9 did NOT fan out 5 Playwright Sonnets at all. The real defects were contract drift caught by static checks + anon-Apex `Flow.Interview` tests (Opus-solo, minutes). The parallelism ceiling question never mattered because the right tool wasn't parallel browsers. **Lesson: question the fan-out itself before tuning its width.**
 
-### Compression-doc author identity
-- **Question:** should the *outgoing* model write the compression doc, or should Opus always write it?
-- **Default rule:** outgoing model writes. They have full context. Opus reviews + accepts.
+### Compression-doc author identity → CONFIRMED
+- **Rule:** the *outgoing* model writes the compression doc (full context = best distillation). Opus reviews + accepts. Held across all 11 compression docs.
+
+### Subagent task SIZE → the load-bearing knob (new, Phase 10)
+- **Resolution:** keep each subagent task to **1-3 min** so the Opus orchestrator can check + intercede immediately instead of waiting 15-30 min. This matters more than which model. A big Sonnet task that runs 20 min and returns wrong is worse than 5 small ones Opus steers in real time.
 
 ---
 

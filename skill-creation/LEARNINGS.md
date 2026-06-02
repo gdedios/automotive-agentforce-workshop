@@ -107,6 +107,21 @@ A Playwright script that drove this end-to-end on this org is committed at `scri
 
 <!-- Phase 10 entries below -->
 
+### LRN-013 `@InvocableMethod` rejects user-defined inner-class parameter types
+**Phase:** 4
+**What we learned:** The class compiles fine, but `sf project deploy` rejects it with `InvocableMethod methods do not support parameter type of List<X.Empty>` when you use a custom marker/empty inner class as the input param. (This is separate from the "one `@InvocableMethod` per class" rule.)
+**Pattern to memorialize:** Use `public static List<Result> execute(List<String> inputs)` — a `List<String>` placeholder the calling flow simply ignores. Applies to both Seeder and Reset. Return type CAN be a custom inner class; only the INPUT param type is restricted.
+
+### LRN-014 LWR Experience Cloud auto-suffixes site api-names with `1`
+**Phase:** 7
+**What we learned:** When the desired LWR site api-name collides with the auto-paired Visualforce site, Salesforce silently creates `<Name>1`. Every downstream reference — the `digitalExperiences` bundle directory name, the `<space>` ref, and the `<site>` ref — must use the suffixed name or the deploy/publish fails to resolve.
+**Pattern to memorialize:** After `sf community create`, retrieve and confirm the ACTUAL site api-name before authoring the bundle. Don't assume the name you asked for is the name you got. Provision-then-deploy (create + poll `BackgroundOperation`, then deploy bundle) so the real name is known before bundle authoring.
+
+### LRN-015 Round-trip clean check needs a semantic diff, not a byte diff
+**Phase:** 10
+**What we learned:** `sf project retrieve` of deployed metadata never byte-matches source: the org injects `<areMetricsLoggedToDataCloud>`, Flow Builder canvas `<styleProperties>/<verticalAlignment>/<width>` on screen flows, normalized variable `<description>`, and XML-declaration ordering. A naive `diff -q` reports false "drift" on every flow.
+**Pattern to memorialize:** Verify by grepping load-bearing markers (the specific fix, the field/action refs) + confirming `<status>Active</status>`, NOT byte-equality. Also: `sf project retrieve --output-dir` must point INSIDE the project root (`/tmp` throws `OutputDirOutsideProjectError`); use a gitignored in-project dir like `pkg-verify/`.
+
 ### LRN-002 Service Agent ships hidden safety subagents not visible in `.agent` source
 **Phase:** 5e
 **Distinct from v2 because:** v2 used Topic-based agents on the OLD builder; the implicit safety topics weren't surfaced in `aiEvaluationDefinition` topic-match assertions because the test runner there reported the user-defined topic. v2 Agent Script's `topic_sequence_match` field includes framework-provided subagents.
