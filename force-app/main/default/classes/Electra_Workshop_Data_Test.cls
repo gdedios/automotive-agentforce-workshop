@@ -16,6 +16,8 @@ private class Electra_Workshop_Data_Test {
 
         List<Account> dealers = [SELECT Id, Dealer_Code__c FROM Account WHERE Dealer_Code__c != null];
         System.assertEquals(3, dealers.size(), 'Expected 3 dealer accounts seeded');
+
+        System.assertEquals(15, [SELECT count() FROM Vehicle_Inventory__c], 'Expected 15 inventory rows seeded');
     }
 
     @IsTest

@@ -160,6 +160,21 @@ public with sharing class Electra_Workshop_Data_Seeder {
             }
             Database.insert(slots, AccessLevel.SYSTEM_MODE);
 
+            // ===== Vehicle Inventory (15 = 3 dealers × 5 models) =====
+            List<Vehicle_Inventory__c> inventory = new List<Vehicle_Inventory__c>();
+            for (Integer d = 0; d < dealers.size(); d++) {
+                for (Integer m = 0; m < models.size(); m++) {
+                    Integer quantity = 2 + Math.mod(d * 5 + m, 7);
+                    inventory.add(new Vehicle_Inventory__c(
+                        Dealer__c=dealers[d].Id,
+                        Vehicle_Model__c=models[m].Id,
+                        Quantity_Available__c=quantity,
+                        Last_Updated__c=Datetime.now()
+                    ));
+                }
+            }
+            Database.insert(inventory, AccessLevel.SYSTEM_MODE);
+
             // ===== Leads (3) =====
             Id eCruiserId = models[0].Id;  // E-Cruiser
             Id eSportId = models[1].Id;    // E-Sport
@@ -222,6 +237,7 @@ public with sharing class Electra_Workshop_Data_Seeder {
             res.summary = '✅ Datos Electra sembrados correctamente:\n'
                 + '• 5 modelos de vehículos\n'
                 + '• 3 concesionarias (Palermo, Córdoba, Rosario)\n'
+                + '• ' + inventory.size() + ' registros de inventario\n'
                 + '• ' + slots.size() + ' turnos de prueba de manejo\n'
                 + '• 3 leads de muestra (Sofía Vega — Confirmado, Tomás Iriarte — Completado, Camila Ruiz — Sin Cita)\n\n'
                 + 'Probá la conversación con: "Hola, soy Sofía Vega — quiero probar el E-Cruiser este sábado en Palermo."';

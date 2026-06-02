@@ -22,8 +22,8 @@
 | 6c | 1 (Opus solo — table-RAG battery) + 1 Sonnet for prose rewrite | 1 (tables-to-prose, disjoint folder=`data/seed-pdfs/`) | yes (only `*.md` in seed-pdfs) | ~25 min vs Opus rewriting 5 tables across 3 files | none yet (validation: `grep -c "^|"` = 0; numeric spot-check 55 hits preserved) | ✅ clean disjoint fan-out. Sonnet held budget (<5min), strike count 0, validation passed |
 | 7 | 1 (sequential — Experience Cloud + MIAW) | | | | | (pending) |
 | 8 | 1 draft + 5 review | | | | | (pending) |
-| 9 | 5 (per-ejercicio drift) | | | | | (pending) |
-| 10 | 2 (manifest+install / handoff) | | | | | (pending) |
+| 9 | 5 (per-ejercicio drift) | 0 (Opus solo, sequential) | n/a | n/a | n/a | ⚠️ COLLAPSED to sequential by design. Drift on a contaminated org + the real defects being *contract* drift (broken URLs, flow I/O names, empty-string bug) meant static checks + anon-Apex `Flow.Interview` contract tests beat 5-way Playwright fan-out. The high-value bug (empty catalog) needed Opus reasoning, not parallel screenshotting. Lesson: re-weight Ph9 toward contract tests; reserve fan-out for genuinely UI-only ejercicios. |
+| 10 | 2 (manifest+install / handoff) | 3 (classes / reset.sh / handoff-doc) | yes — `classes/`, `scripts/reset.sh`, `docs/SESSION_HANDOFF.md` fully disjoint | ~10 min vs Opus authoring all 3 serially; each subagent 52s–200s | 10B summary regex hid output (Opus fixed); 10C written against pre-fix state (Opus reconciled) | ✅ clean 3-way fan-out, 0 clobber, 0 BLOCKER. Small tasks (1-3 min) let Opus intercede instantly. Both regressions caught by the verify-against-reality rule, not the subagent summaries. |
 | 11 | 1 (Opus solo — skill harvest) | | | | | (pending) |
 | 12 | 1 (Opus solo — org cleanup) | | | | | (pending) |
 
