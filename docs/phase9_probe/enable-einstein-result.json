@@ -1,0 +1,11 @@
+{
+  "step": "enable-einstein",
+  "clicked": true,
+  "confirmed": null,
+  "afterChecked": true,
+  "clickDetail": {
+    "ok": true,
+    "clickedTag": "SPAN",
+    "clickedClass": "slds-checkbox_faux"
+  }
+}

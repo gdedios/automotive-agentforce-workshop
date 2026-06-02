@@ -73,18 +73,20 @@ Los **Flows** + **Apex** + objetos **Custom** + portal **Experience Cloud** + ch
 3. **Guardá las credenciales** en tu gestor de contraseñas — las vas a necesitar durante las próximas 2 horas.
 4. Si aparece un popup de "Code Builder no está habilitado" o "Try the new **Field Service Setup**", cerralo — no los vamos a usar.
 
-### Paso 2 — Instalar el paquete del workshop
+### Paso 2 — Confirmar que la metadata del workshop está instalada
 
-El paquete trae 3 objetos custom (`Vehicle_Model__c`, `Test_Drive_Slot__c`, `Vehicle_Inventory__c`), 6 Flows (4 backing del agente + 2 screen flows de Sembrar/Resetear), 2 Apex classes, una app Lightning con Home flexipage, un permission set, el sitio Experience Cloud `Electra Customer Portal` y el MIAW pre-armados.
+El **instalador del workshop** (que corre el facilitador antes de empezar) despliega 3 objetos custom (`Vehicle_Model__c`, `Test_Drive_Slot__c`, `Vehicle_Inventory__c`), 6 Flows (4 backing del agente + 2 screen flows de Sembrar/Resetear), 2 Apex classes, una app Lightning con Home flexipage y un permission set. El sitio Experience Cloud `Electra Customer Portal` y el MIAW se despliegan aparte (Ejercicio 4).
 
-- [ ] Abrí esta URL en una nueva pestaña (ya autenticado en tu org):
-  ```
-  https://login.salesforce.com/packaging/installPackage.apexp?p0=<PACKAGE_ID>
-  ```
-- [ ] Vas a ver la pantalla de consentimiento de instalación.
-- [ ] Seleccioná **Install for All Users** (instalar para todos los usuarios). Hacé clic en **Install**.
-- [ ] La instalación tarda entre 2 y 4 minutos. Vas a ver una pantalla "Installing and granting access to all users".
-- [ ] Cuando termine, te lleva automáticamente a **Setup** → **Installed Packages**. Confirmá que ves **Electra Auto Workshop Bootstrap** en la lista.
+> **Nota para el facilitador:** la instalación NO es un paquete administrado con URL. Se hace por **deploy de metadata** desde el repo del workshop:
+> ```
+> bash scripts/install.sh -o <alias-de-tu-org>
+> ```
+> Esto despliega los 45 componentes, asigna el permission set y sube los 3 PDFs a Files. Tarda ~3 minutos. Corré esto **una vez por org** antes de que lleguen los estudiantes.
+
+Como estudiante, verificá que la metadata ya está en tu org:
+
+- [ ] Andá a **Setup → Quick Find →** `Custom Objects` y confirmá que aparecen **Vehicle Model**, **Test Drive Slot** y **Vehicle Inventory**.
+- [ ] Andá a **Setup → Quick Find →** `Flows` y confirmá que ves los 6 flows (`Get_Vehicle_Catalog`, `Get_Vehicle_Detail`, `Schedule_Test_Drive`, `Get_Test_Drive_Status`, `Seed_Workshop_Data`, `Reset_Workshop_Data`), todos en estado **Active**.
 
 ### Paso 3 — Abrir la app Electra Sales Studio
 
@@ -100,7 +102,7 @@ Sin esto, el agente no tiene registros sobre los que actuar. El botón **Sembrar
 
 - 5 modelos Electra (E-Cruiser, E-Sport, E-Wagon, E-Truck, E-City) con sus fichas técnicas
 - 3 cuentas de concesionaria (Concesionaria Electra Palermo, Córdoba, Rosario)
-- ~20 turnos de prueba de manejo (`Test_Drive_Slot__c`) repartidos los próximos 14 días
+- ~30 turnos de prueba de manejo (`Test_Drive_Slot__c`) repartidos los próximos 14 días
 - 3 **leads** de muestra (Sofía Vega con prueba confirmada, Tomás Iriarte con prueba completada, Camila Ruiz sin prueba)
 
 - [ ] En **Home**, hacé clic en **Sembrar Datos**.
@@ -158,21 +160,20 @@ Los **permission sets** no se asignan automáticamente con el paquete. Hacé est
 
 > **Nota técnica:** la org viene con **Atlas**, el runtime de razonamiento más nuevo de Agentforce. Los **Service Agents** (como el que vas a construir hoy) requieren un **default agent user** que el wizard te pregunta al crear el agente — la org viene con un usuario `EinsteinServiceAgent` pre-creado.
 
-### Paso 3 — Subir los 3 PDFs de Electra a Files
+### Paso 3 — Confirmar que los 3 PDFs de Electra están en Files
 
-Antes de crear la **Data Library** tenés que tener los PDFs disponibles como archivos en la org. Los PDFs están alojados en GitHub:
+Antes de crear la **Data Library** tenés que tener los PDFs disponibles como archivos en la org. **El instalador del workshop ya los subió por vos** (los carga como `ContentVersion` durante `install.sh`), así que no tenés que descargar nada de internet.
 
-- `Electra-Catalogo-Vehiculos-Argentina.pdf` — https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Catalogo-Vehiculos-Argentina.pdf
-- `Electra-Politicas-de-Garantia.pdf` — https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Politicas-de-Garantia.pdf
-- `Electra-Guia-Carga-y-Mantenimiento.pdf` — https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Guia-Carga-y-Mantenimiento.pdf
+1. Abrí el **App Launcher** (los 9 puntitos) y buscá **Files**.
+2. En el panel izquierdo, hacé clic en **Owned by Me** (o **All Files**).
+3. Confirmá que aparecen los 3 PDFs con estos nombres exactos:
+   - `Electra-Catalogo-Vehiculos-Argentina`
+   - `Electra-Politicas-de-Garantia`
+   - `Electra-Guia-Carga-y-Mantenimiento`
 
-> **Tip de Chrome:** GitHub raw sirve los PDFs con un Content-Disposition que dispara el diálogo **Save As** en lugar de abrir el PDF inline. Esto es esperado — descargá los 3 archivos a tu carpeta **Downloads**.
+> **¿No ves los archivos?** Avisale al facilitador — puede re-subirlos corriendo `bash scripts/install.sh -o <alias>` de nuevo (la subida es idempotente: detecta los que ya existen por título y no los duplica).
 
-1. Descargá los 3 PDFs siguiendo cada link (clic derecho → **Guardar como** o aceptar el diálogo).
-2. En Salesforce, abrí el **App Launcher** y buscá **Files**.
-3. Hacé clic en el botón **Upload Files** (arriba a la derecha) y subí los 3 PDFs.
-
-> ✅ **Checkpoint:** los 3 archivos aparecen en **Files → Owned by Me** con sus nombres exactos.
+> ✅ **Checkpoint:** los 3 archivos aparecen en **Files** con sus nombres exactos.
 
 ### Paso 4 — Crear la Data Library
 
@@ -343,9 +344,9 @@ Este subagent maneja el flujo "mostrame el catálogo" + "dame la ficha del E-Cru
 - [ ] **Action Name:** `Get_Vehicle_Catalog`.
 - [ ] **Description:**
   - `Listar el catálogo de modelos Electra activos, opcionalmente filtrado por segmento (Sedan, Pickup, Hatchback, etc.)`.
-- [ ] El input `vehicleType` se deja "Bind to a value the agent identifies during runtime".
-  - El agente extrae el segmento del prompt.
-- [ ] El output `catalogText` se deja **Show in conversation** → True (queremos que el catálogo se muestre al usuario).
+- [ ] El input `segmentFilter` se deja "Bind to a value the agent identifies during runtime".
+  - El agente extrae el segmento del prompt. Si el usuario no menciona segmento, el flow devuelve los 5 modelos (maneja el caso vacío internamente).
+- [ ] El output `vehicleSummaries` se deja **Show in conversation** → True (queremos que el catálogo se muestre al usuario).
 - [ ] Hacé clic en **Save**.
 
 Repetí para `Get_Vehicle_Detail`:
@@ -354,7 +355,7 @@ Repetí para `Get_Vehicle_Detail`:
 - [ ] **Action Name:** `Get_Vehicle_Detail`.
 - [ ] **Description:** `Devolver la ficha técnica completa de un modelo Electra específico por código.`
 - [ ] Input `modelCode`: bind to runtime value, descripción `Código de 4 letras (ECRU/ESPT/EWGN/ETRK/ECTY).`
-- [ ] Output `detailText`: **Show in conversation** → True.
+- [ ] Output `detail`: **Show in conversation** → True.
 - [ ] Hacé clic en **Save**.
 
 ### Paso 7 — Subagent #2: Prueba de Manejo
@@ -396,8 +397,8 @@ Este subagent maneja el flujo "quiero agendar una prueba de manejo".
   - `requestedDateTime` — `Fecha y hora deseada en formato ISO 8601 (yyyy-MM-ddTHH:mm:ss).`
   - `confirmCreate` — `False en preview; True solo después de confirmación explícita del usuario.`
 - [ ] Outputs:
-  - `confirmationText` → **Show in conversation** = True.
-  - `slotId` → **Show in conversation** = False (uso interno).
+  - `confirmation` → **Show in conversation** = True.
+  - `bookedSlotId` → **Show in conversation** = False (uso interno).
 - [ ] Hacé clic en **Save**.
 
 ### Paso 9 — Subagent #3: Estado y FAQ + AQWK
@@ -434,7 +435,7 @@ Este subagent maneja DOS rutas: estado de prueba previa, y FAQ con RAG.
 - [ ] **Action Name:** `Get_Test_Drive_Status`.
 - [ ] **Description:** `Consultar el estado de una prueba de manejo previamente agendada por email del cliente.`
 - [ ] Input `customerEmail`: bind to runtime value, descripción `Email del cliente con el que se agendó la prueba de manejo.`
-- [ ] Output `statusText`: **Show in conversation** = True.
+- [ ] Output `status`: **Show in conversation** = True.
 - [ ] Hacé clic en **Save**.
 
 ### Paso 11 — Agregar la acción AnswerQuestionsWithKnowledge

@@ -198,10 +198,10 @@
             <name>Has_Filter</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>segmentFilter</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>Has_Segment_Filter</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -236,6 +236,11 @@
         </rules>
     </decisions>
     <description>Returns a Spanish-language catalog of active Electra vehicle models. Optionally filters by segment type. Called by ElectraAI Auto Concierge agent.</description>
+    <formulas>
+        <name>Has_Segment_Filter</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT(ISBLANK({!segmentFilter}))</expression>
+    </formulas>
     <interviewLabel>Get Vehicle Catalog {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Get Vehicle Catalog</label>
     <loops>

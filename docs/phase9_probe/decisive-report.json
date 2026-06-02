@@ -1,0 +1,27 @@
+{
+  "agentforceLinks": [
+    "Search\"Agentforce\" in Setup",
+    "Commerce Agentforce SettingsFeature Settings > Commerce",
+    "Agentforce Data LibraryEinstein",
+    "Setup with AgentforceEinstein > Einstein Generative AI",
+    "Agentforce AssetsEinstein > Einstein Generative AI > Agentforce Studio",
+    "Agentforce AgentsEinstein > Einstein Generative AI > Agentforce Studio",
+    "AgentExchange Offers",
+    "Einstein"
+  ],
+  "einsteinSetupMentionsAgent": false,
+  "einsteinSetupSections": [
+    "Einstein Setup",
+    "Turn on Einstein",
+    "Turn on Einstein",
+    "Prompt Builder Settings",
+    "Global Languages",
+    "Global Languages",
+    "Allow Unsafe Changes",
+    "Allow changes that might break references to active templates, like adding required inputs or changing the response format.",
+    "Allow Unsafe Changes",
+    "Deploy Prompt Templates",
+    "Deploy prompt templates between sandbox and production orgs using change sets.",
+    "Deploy Prompt Templates"
+  ]
+}

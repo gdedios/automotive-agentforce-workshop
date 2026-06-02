@@ -1,0 +1,11 @@
+{
+  "step": "enable-agentforce",
+  "clicked": true,
+  "confirmed": null,
+  "afterChecked": true,
+  "clickDetail": {
+    "ok": true,
+    "clicked": true,
+    "cls": "slds-checkbox_faux"
+  }
+}

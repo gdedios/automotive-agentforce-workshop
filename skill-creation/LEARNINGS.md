@@ -93,6 +93,18 @@ A Playwright script that drove this end-to-end on this org is committed at `scri
 
 <!-- Phase 9 entries below -->
 
+### LRN-011 Drift round = flow-contract test, not Playwright UI capture
+**Phase:** 9
+**What we learned:** The highest-severity Phase 9 bug (empty vehicle catalog) and the two guide-name mismatches were ALL caught by executing the agent-backing flows via `Flow.Interview` in anonymous Apex against seeded data and asserting against the guide's stated outputs — zero browser. v2 over-invested in per-ejercicio Playwright UI-label capture; the real defects were guide-vs-reality *contract* drift: broken external deps, flow I/O name mismatches, an empty-string edge case, a non-existent package URL. UI labels barely drifted.
+**Pattern to memorialize:** Phase 9 should LEAD with (a) static checks — `curl` every external URL the guide cites, grep the guide's API names vs actual flow XML; then (b) a flow-contract pass — run every agent-backing flow against seeded data, assert each output matches the canonical-prompt assertions in the guide. Reserve Playwright for the genuinely UI-only ejercicios (Builder authoring, Conversation Preview, Experience Cloud). Re-weight the phase budget accordingly.
+**[SKILL-CANDIDATE]** New skill ref `references/drift-contract-tests.md`: a checklist that turns each canonical prompt into a flow-execution assertion. Ship a reusable `scripts/contract-test-flows.apex` template.
+
+### LRN-012 `IsNull` ≠ `ISBLANK` for LLM-supplied optional string inputs (BUG class)
+**Phase:** 9
+**What we learned:** `Get_Vehicle_Catalog` gated its segment filter on a decision `segmentFilter IsNull = false`. LLMs routinely fill an *unmentioned* optional action input with `""` rather than leaving it null, so the empty string fell into the filtered branch (`Type__c = ''`) and returned zero models — silently breaking the first golden-path prompt. Fix: Boolean formula `Has_Segment_Filter = NOT(ISBLANK({!segmentFilter}))` and route the decision on that.
+**Pattern to memorialize:** Any Flow decision that gates an OPTIONAL agent-action input MUST treat blank-or-null uniformly via `NOT(ISBLANK())` — never bare `IsNull`. This belongs in the flow-authoring checklist AND the agentscript action-design guidance (the agent layer can't be trusted to send null).
+**[SKILL-CANDIDATE]** Add to flow-authoring + agentscript action references: "optional string inputs from an LLM → ISBLANK guard, never IsNull."
+
 <!-- Phase 10 entries below -->
 
 ### LRN-002 Service Agent ships hidden safety subagents not visible in `.agent` source

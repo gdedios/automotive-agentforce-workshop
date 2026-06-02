@@ -1,0 +1,29 @@
+{
+  "clickedAgents": true,
+  "urlAfter": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinCopilot/home",
+  "contentSample": "SETUPAGENTFORCE STUDIO\nAgentforce Agents\nAgentforce\nHelp\nOff",
+  "toggles": [
+    {
+      "text": "OnOff",
+      "checked": false
+    }
+  ],
+  "buttons": [
+    "Menu",
+    "Show menu",
+    "This item doesn't support favorites",
+    "Favorites list",
+    "Guidance Center",
+    "Salesforce Help",
+    "1Notifications",
+    "View profile",
+    "App Launcher",
+    "Expand",
+    "Collapse",
+    "Help",
+    "Pin the Panel",
+    "Home",
+    "Close",
+    "Dismiss"
+  ]
+}

@@ -229,30 +229,38 @@ del navegador e ingresá con el usuario asignado.</li>
 new <strong>Field Service Setup</strong>”, cerralo — no los vamos a
 usar.</li>
 </ol>
-<h3 id="paso-2-instalar-el-paquete-del-workshop">Paso 2 — Instalar el
-paquete del workshop</h3>
-<p>El paquete trae 3 objetos custom (<code>Vehicle_Model__c</code>,
-<code>Test_Drive_Slot__c</code>, <code>Vehicle_Inventory__c</code>), 6
-Flows (4 backing del agente + 2 screen flows de Sembrar/Resetear), 2
-Apex classes, una app Lightning con Home flexipage, un permission set,
-el sitio Experience Cloud <code>Electra Customer Portal</code> y el MIAW
-pre-armados.</p>
+<h3
+id="paso-2-confirmar-que-la-metadata-del-workshop-está-instalada">Paso 2
+— Confirmar que la metadata del workshop está instalada</h3>
+<p>El <strong>instalador del workshop</strong> (que corre el facilitador
+antes de empezar) despliega 3 objetos custom
+(<code>Vehicle_Model__c</code>, <code>Test_Drive_Slot__c</code>,
+<code>Vehicle_Inventory__c</code>), 6 Flows (4 backing del agente + 2
+screen flows de Sembrar/Resetear), 2 Apex classes, una app Lightning con
+Home flexipage y un permission set. El sitio Experience Cloud
+<code>Electra Customer Portal</code> y el MIAW se despliegan aparte
+(Ejercicio 4).</p>
+<blockquote>
+<p><strong>Nota para el facilitador:</strong> la instalación NO es un
+paquete administrado con URL. Se hace por <strong>deploy de
+metadata</strong> desde el repo del workshop:</p>
+<pre><code>bash scripts/install.sh -o &lt;alias-de-tu-org&gt;</code></pre>
+<p>Esto despliega los 45 componentes, asigna el permission set y sube
+los 3 PDFs a Files. Tarda ~3 minutos. Corré esto <strong>una vez por
+org</strong> antes de que lleguen los estudiantes.</p>
+</blockquote>
+<p>Como estudiante, verificá que la metadata ya está en tu org:</p>
 <ul class="task-list">
-<li><p><label><input type="checkbox" />Abrí esta URL en una nueva
-pestaña (ya autenticado en tu org):</label></p>
-<pre><code>https://login.salesforce.com/packaging/installPackage.apexp?p0=&lt;PACKAGE_ID&gt;</code></pre></li>
-<li><p><label><input type="checkbox" />Vas a ver la pantalla de
-consentimiento de instalación.</label></p></li>
-<li><p><label><input type="checkbox" />Seleccioná <strong>Install for
-All Users</strong> (instalar para todos los usuarios). Hacé clic en
-<strong>Install</strong>.</label></p></li>
-<li><p><label><input type="checkbox" />La instalación tarda entre 2 y 4
-minutos. Vas a ver una pantalla “Installing and granting access to all
-users”.</label></p></li>
-<li><p><label><input type="checkbox" />Cuando termine, te lleva
-automáticamente a <strong>Setup</strong> → <strong>Installed
-Packages</strong>. Confirmá que ves <strong>Electra Auto Workshop
-Bootstrap</strong> en la lista.</label></p></li>
+<li><label><input type="checkbox" />Andá a <strong>Setup → Quick Find
+→</strong> <code>Custom Objects</code> y confirmá que aparecen
+<strong>Vehicle Model</strong>, <strong>Test Drive Slot</strong> y
+<strong>Vehicle Inventory</strong>.</label></li>
+<li><label><input type="checkbox" />Andá a <strong>Setup → Quick Find
+→</strong> <code>Flows</code> y confirmá que ves los 6 flows
+(<code>Get_Vehicle_Catalog</code>, <code>Get_Vehicle_Detail</code>,
+<code>Schedule_Test_Drive</code>, <code>Get_Test_Drive_Status</code>,
+<code>Seed_Workshop_Data</code>, <code>Reset_Workshop_Data</code>),
+todos en estado <strong>Active</strong>.</label></li>
 </ul>
 <h3 id="paso-3-abrir-la-app-electra-sales-studio">Paso 3 — Abrir la app
 Electra Sales Studio</h3>
@@ -284,7 +292,7 @@ que pobla tu org con datos realistas:</p>
 con sus fichas técnicas</p></li>
 <li><p>3 cuentas de concesionaria (Concesionaria Electra Palermo,
 Córdoba, Rosario)</p></li>
-<li><p>~20 turnos de prueba de manejo (<code>Test_Drive_Slot__c</code>)
+<li><p>~30 turnos de prueba de manejo (<code>Test_Drive_Slot__c</code>)
 repartidos los próximos 14 días</p></li>
 <li><p>3 <strong>leads</strong> de muestra (Sofía Vega con prueba
 confirmada, Tomás Iriarte con prueba completada, Camila Ruiz sin
@@ -404,36 +412,35 @@ construir hoy) requieren un <strong>default agent user</strong> que el
 wizard te pregunta al crear el agente — la org viene con un usuario
 <code>EinsteinServiceAgent</code> pre-creado.</p>
 </blockquote>
-<h3 id="paso-3-subir-los-3-pdfs-de-electra-a-files">Paso 3 — Subir los 3
-PDFs de Electra a Files</h3>
+<h3 id="paso-3-confirmar-que-los-3-pdfs-de-electra-están-en-files">Paso
+3 — Confirmar que los 3 PDFs de Electra están en Files</h3>
 <p>Antes de crear la <strong>Data Library</strong> tenés que tener los
-PDFs disponibles como archivos en la org. Los PDFs están alojados en
-GitHub:</p>
-<ul>
-<li><code>Electra-Catalogo-Vehiculos-Argentina.pdf</code> —
-https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Catalogo-Vehiculos-Argentina.pdf</li>
-<li><code>Electra-Politicas-de-Garantia.pdf</code> —
-https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Politicas-de-Garantia.pdf</li>
-<li><code>Electra-Guia-Carga-y-Mantenimiento.pdf</code> —
-https://raw.githubusercontent.com/gdedios/automotive-workshop/main/Electra-Guia-Carga-y-Mantenimiento.pdf</li>
-</ul>
-<blockquote>
-<p><strong>Tip de Chrome:</strong> GitHub raw sirve los PDFs con un
-Content-Disposition que dispara el diálogo <strong>Save As</strong> en
-lugar de abrir el PDF inline. Esto es esperado — descargá los 3 archivos
-a tu carpeta <strong>Downloads</strong>.</p>
-</blockquote>
+PDFs disponibles como archivos en la org. <strong>El instalador del
+workshop ya los subió por vos</strong> (los carga como
+<code>ContentVersion</code> durante <code>install.sh</code>), así que no
+tenés que descargar nada de internet.</p>
 <ol type="1">
-<li>Descargá los 3 PDFs siguiendo cada link (clic derecho →
-<strong>Guardar como</strong> o aceptar el diálogo).</li>
-<li>En Salesforce, abrí el <strong>App Launcher</strong> y buscá
+<li>Abrí el <strong>App Launcher</strong> (los 9 puntitos) y buscá
 <strong>Files</strong>.</li>
-<li>Hacé clic en el botón <strong>Upload Files</strong> (arriba a la
-derecha) y subí los 3 PDFs.</li>
+<li>En el panel izquierdo, hacé clic en <strong>Owned by Me</strong> (o
+<strong>All Files</strong>).</li>
+<li>Confirmá que aparecen los 3 PDFs con estos nombres exactos:
+<ul>
+<li><code>Electra-Catalogo-Vehiculos-Argentina</code></li>
+<li><code>Electra-Politicas-de-Garantia</code></li>
+<li><code>Electra-Guia-Carga-y-Mantenimiento</code></li>
+</ul></li>
 </ol>
 <blockquote>
+<p><strong>¿No ves los archivos?</strong> Avisale al facilitador — puede
+re-subirlos corriendo
+<code>bash scripts/install.sh -o &lt;alias&gt;</code> de nuevo (la
+subida es idempotente: detecta los que ya existen por título y no los
+duplica).</p>
+</blockquote>
+<blockquote>
 <p>✅ <strong>Checkpoint:</strong> los 3 archivos aparecen en
-<strong>Files → Owned by Me</strong> con sus nombres exactos.</p>
+<strong>Files</strong> con sus nombres exactos.</p>
 </blockquote>
 <h3 id="paso-4-crear-la-data-library">Paso 4 — Crear la Data
 Library</h3>
@@ -728,14 +735,17 @@ type="checkbox" /><strong>Description:</strong></label>
 <ul>
 <li><code>Listar el catálogo de modelos Electra activos, opcionalmente filtrado por segmento (Sedan, Pickup, Hatchback, etc.)</code>.</li>
 </ul></li>
-<li><label><input type="checkbox" />El input <code>vehicleType</code> se
-deja “Bind to a value the agent identifies during runtime”.</label>
+<li><label><input type="checkbox" />El input <code>segmentFilter</code>
+se deja “Bind to a value the agent identifies during runtime”.</label>
 <ul>
-<li>El agente extrae el segmento del prompt.</li>
+<li>El agente extrae el segmento del prompt. Si el usuario no menciona
+segmento, el flow devuelve los 5 modelos (maneja el caso vacío
+internamente).</li>
 </ul></li>
-<li><label><input type="checkbox" />El output <code>catalogText</code>
-se deja <strong>Show in conversation</strong> → True (queremos que el
-catálogo se muestre al usuario).</label></li>
+<li><label><input type="checkbox" />El output
+<code>vehicleSummaries</code> se deja <strong>Show in
+conversation</strong> → True (queremos que el catálogo se muestre al
+usuario).</label></li>
 <li><label><input type="checkbox" />Hacé clic en
 <strong>Save</strong>.</label></li>
 </ul>
@@ -751,7 +761,7 @@ catálogo se muestre al usuario).</label></li>
 <li><label><input type="checkbox" />Input <code>modelCode</code>: bind
 to runtime value, descripción
 <code>Código de 4 letras (ECRU/ESPT/EWGN/ETRK/ECTY).</code></label></li>
-<li><label><input type="checkbox" />Output <code>detailText</code>:
+<li><label><input type="checkbox" />Output <code>detail</code>:
 <strong>Show in conversation</strong> → True.</label></li>
 <li><label><input type="checkbox" />Hacé clic en
 <strong>Save</strong>.</label></li>
@@ -818,10 +828,10 @@ value):</label>
 </ul></li>
 <li><label><input type="checkbox" />Outputs:</label>
 <ul>
-<li><code>confirmationText</code> → <strong>Show in
-conversation</strong> = True.</li>
-<li><code>slotId</code> → <strong>Show in conversation</strong> = False
-(uso interno).</li>
+<li><code>confirmation</code> → <strong>Show in conversation</strong> =
+True.</li>
+<li><code>bookedSlotId</code> → <strong>Show in conversation</strong> =
+False (uso interno).</li>
 </ul></li>
 <li><label><input type="checkbox" />Hacé clic en
 <strong>Save</strong>.</label></li>
@@ -876,7 +886,7 @@ FAQ</strong>, <strong>+ Add Action</strong> → <strong>From Flow</strong>
 <li><label><input type="checkbox" />Input <code>customerEmail</code>:
 bind to runtime value, descripción
 <code>Email del cliente con el que se agendó la prueba de manejo.</code></label></li>
-<li><label><input type="checkbox" />Output <code>statusText</code>:
+<li><label><input type="checkbox" />Output <code>status</code>:
 <strong>Show in conversation</strong> = True.</label></li>
 <li><label><input type="checkbox" />Hacé clic en
 <strong>Save</strong>.</label></li>

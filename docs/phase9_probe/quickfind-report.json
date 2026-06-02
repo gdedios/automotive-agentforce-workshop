@@ -1,0 +1,32 @@
+{
+  "Agent": {
+    "typed": true,
+    "relevantLinks": [
+      "Search\"Agent\" in Setup",
+      "AgentExchange Offers",
+      "Agentforce Data LibraryEinstein",
+      "Einstein"
+    ]
+  },
+  "Bot": {
+    "typed": true,
+    "relevantLinks": [
+      "Search\"Bot\" in Setup",
+      "Einstein BotsEinstein > Einstein Platform",
+      "AgentExchange Offers",
+      "Einstein"
+    ]
+  },
+  "Einstein": {
+    "typed": true,
+    "relevantLinks": [
+      "Search\"Einstein\" in Setup",
+      "Einstein.aiEinstein > Einstein Platform",
+      "Einstein BotsEinstein > Einstein Platform",
+      "Einstein SetupEinstein > Einstein Generative AI",
+      "Create with EinsteinData Mask",
+      "AgentExchange Offers",
+      "Einstein"
+    ]
+  }
+}

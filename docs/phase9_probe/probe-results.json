@@ -1,0 +1,23 @@
+{
+  "einstein-gpt": {
+    "requested": "lightning/setup/EinsteinGPTSetup/home",
+    "finalUrl": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinGPTSetup/home?SetupDomainProbePassed=true&SetupDomainReload=1",
+    "onLogin": false,
+    "textSample": "Search Salesforce\nOpen menu item submenu\nSpring '26",
+    "screenshot": "/Users/gdedios/Desktop/Test/claude-projects/Projects/05-2026/Automotive-Workshop/docs/phase9_probe/einstein-gpt.png"
+  },
+  "agentforce-copilot": {
+    "requested": "lightning/setup/EinsteinCopilot/home",
+    "finalUrl": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinCopilot/home",
+    "onLogin": false,
+    "textSample": "Skip to Navigation\nSkip to Main Content\nMenu\nDeveloper Edition\nShow menu\nSearch Setup\nThis item doesn't support favorites\nFavorites list\nGlobal Actions\nGuidance Center\nSalesforce Help\nSetup\n1\nNotifications\n1 new notifications\nView profile\nApp Launcher\nSetup\nPress Spacebar to reorder tabs.\nHome\nObject Manager\nObject Manager List\nQuick Find\nSetup Home\nSalesforce Go\nService Setup Assistant\nCommerce Setup Assistant\nHyperforce Assistant\nRelease Updates\nSalesforce Mobile App\nLightning Usage\nAgentExchange Offers\nSales Cloud Everywhere\nADMINISTRATION\nExpand\nUsers\nExpand\nData\nExpand\nEmail\nPLATFORM TOOLS\nExpand\nSubscription Management\nExpand\nApps\nExpand\nFeature Settings\nExpand\nSlack\nExpand\nData Cloud\nExpand\nHeroku\nExpand\nMuleSoft\nExpand\nEinstein\nExpand\nObjects and Fields\nExpand\nEvents\nExpand\nProcess Automation\nExpand\nUser Interface\nExpand\nCustom Code\nExpand\nDevelopment\nExpand\nScale\nExpand\nEnvironments\nExpand\nUser Engagement\nExpand\nEnablement\nExpand\nIntegrations\nExpand\nNotification Builder\nExpand\nOffline\nExpand\nGo Accelerate\nSETTINGS\nExpand\nCompany Settings\nExpand\nData Classification\nExpand\nPrivacy Center\nExpand\nData Mask\nExpand\nIdentity\nExpand\nSecurity\nPage not found\n\nThe page you requested was not found, or you do not have permission to view this page.",
+    "screenshot": "/Users/gdedios/Desktop/Test/claude-projects/Projects/05-2026/Automotive-Workshop/docs/phase9_probe/agentforce-copilot.png"
+  },
+  "agents-studio": {
+    "requested": "lightning/setup/EinsteinAgentforce/home",
+    "finalUrl": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinAgentforce/home",
+    "onLogin": false,
+    "textSample": "Skip to Navigation\nSkip to Main Content\nMenu\nDeveloper Edition\nShow menu\nSearch Setup\nThis item doesn't support favorites\nFavorites list\nGlobal Actions\nGuidance Center\nSalesforce Help\nSetup\n1\nNotifications\n1 new notifications\nView profile\nApp Launcher\nSetup\nPress Spacebar to reorder tabs.\nHome\nObject Manager\nObject Manager List\nQuick Find\nSetup Home\nSalesforce Go\nService Setup Assistant\nCommerce Setup Assistant\nHyperforce Assistant\nRelease Updates\nSalesforce Mobile App\nLightning Usage\nAgentExchange Offers\nSales Cloud Everywhere\nADMINISTRATION\nExpand\nUsers\nExpand\nData\nExpand\nEmail\nPLATFORM TOOLS\nExpand\nSubscription Management\nExpand\nApps\nExpand\nFeature Settings\nExpand\nSlack\nExpand\nData Cloud\nExpand\nHeroku\nExpand\nMuleSoft\nExpand\nEinstein\nExpand\nObjects and Fields\nExpand\nEvents\nExpand\nProcess Automation\nExpand\nUser Interface\nExpand\nCustom Code\nExpand\nDevelopment\nExpand\nScale\nExpand\nEnvironments\nExpand\nUser Engagement\nExpand\nEnablement\nExpand\nIntegrations\nExpand\nNotification Builder\nExpand\nOffline\nExpand\nGo Accelerate\nSETTINGS\nExpand\nCompany Settings\nExpand\nData Classification\nExpand\nPrivacy Center\nExpand\nData Mask\nExpand\nIdentity\nExpand\nSecurity\nPage not found\n\nThe page you requested was not found, or you do not have permission to view this page.",
+    "screenshot": "/Users/gdedios/Desktop/Test/claude-projects/Projects/05-2026/Automotive-Workshop/docs/phase9_probe/agents-studio.png"
+  }
+}

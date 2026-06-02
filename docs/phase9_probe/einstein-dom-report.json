@@ -1,0 +1,82 @@
+{
+  "checkboxes": [
+    {
+      "i": 947,
+      "ariaLabel": null,
+      "name": "",
+      "checked": false,
+      "id": "checkbox-toggle-106"
+    },
+    {
+      "i": 989,
+      "ariaLabel": null,
+      "name": "",
+      "checked": false,
+      "id": "checkbox-toggle-109"
+    },
+    {
+      "i": 1015,
+      "ariaLabel": null,
+      "name": "",
+      "checked": false,
+      "id": "checkbox-toggle-112"
+    },
+    {
+      "i": 1041,
+      "ariaLabel": null,
+      "name": "",
+      "checked": false,
+      "id": "checkbox-toggle-115"
+    }
+  ],
+  "toggleLabels": [
+    {
+      "i": 941,
+      "text": ""
+    },
+    {
+      "i": 945,
+      "text": "Turn on EinsteinOnOff"
+    },
+    {
+      "i": 983,
+      "text": ""
+    },
+    {
+      "i": 987,
+      "text": "Global LanguagesOnOff"
+    },
+    {
+      "i": 1009,
+      "text": ""
+    },
+    {
+      "i": 1013,
+      "text": "Allow Unsafe ChangesOnOff"
+    },
+    {
+      "i": 1035,
+      "text": ""
+    },
+    {
+      "i": 1039,
+      "text": "Deploy Prompt TemplatesOnOff"
+    }
+  ],
+  "buttons": [
+    "Menu",
+    "Show menu",
+    "Favorites list",
+    "Guidance Center",
+    "Salesforce Help",
+    "1Notifications",
+    "View profile",
+    "App Launcher",
+    "Expand",
+    "Collapse",
+    "Pin the Panel",
+    "Home",
+    "Close",
+    "Dismiss"
+  ]
+}

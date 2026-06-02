@@ -1,0 +1,21 @@
+SETUP
+Einstein Setup
+Turn on Einstein
+
+Enhance your Salesforce data with generative AI to create relevant, customized experiences for your users. Learn more in help.
+
+Turn on Einstein
+Off
+Prompt Builder Settings
+Global Languages
+Use global languages with prompt templates. See Supported Languages. Some Einstein Trust Layer features may not be available for certain languages. See Einstein Trust Layer Language Support.
+Global Languages
+Off
+Allow Unsafe Changes
+Allow changes that might break references to active templates, like adding required inputs or changing the response format.
+Allow Unsafe Changes
+Off
+Deploy Prompt Templates
+Deploy prompt templates between sandbox and production orgs using change sets.
+Deploy Prompt Templates
+Off

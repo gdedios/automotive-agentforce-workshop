@@ -1,0 +1,44 @@
+{
+  "agents-setup": {
+    "path": "lightning/setup/EinsteinAgentSetup/home",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinAgentSetup/home?SetupDomainProbePassed=true&SetupDomainReload=1",
+    "notFound": false,
+    "head": "",
+    "toggleLabels": []
+  },
+  "agentforce-studio-nav": {
+    "path": "lightning/n/standard-AgentforceStudio",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.lightning.force.com/lightning/n/standard-AgentforceStudio",
+    "notFound": false,
+    "head": "Home\nData Cloud\nPronto\nHome Page\nQuarterly Performance\nRefresh Chart\nCLOSED$1,820,000\nOPEN (>70%)$270,000\nGOAL--\nEdit Goal\nChart: Quarterly Performance\nClosedGoalClosed + Open (>70%)\nClick here to view quarterly performance data\nRecent Records\n\t\nTrail User",
+    "toggleLabels": []
+  },
+  "einstein-agent": {
+    "path": "lightning/setup/EinsteinAgent/home",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinAgent/home",
+    "notFound": true,
+    "head": "Page not found\nThe page you requested was not found, or you do not have permission to view this page.",
+    "toggleLabels": []
+  },
+  "bot-setup": {
+    "path": "lightning/setup/EinsteinAgentforceOnboarding/home",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinAgentforceOnboarding/home",
+    "notFound": true,
+    "head": "Page not found\nThe page you requested was not found, or you do not have permission to view this page.",
+    "toggleLabels": []
+  },
+  "einstein-copilot-svc": {
+    "path": "lightning/setup/CopilotSetup/home",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/CopilotSetup/home",
+    "notFound": true,
+    "head": "Page not found\nThe page you requested was not found, or you do not have permission to view this page.",
+    "toggleLabels": []
+  },
+  "agentforce-agents": {
+    "path": "lightning/setup/AiAgentMgmt/home",
+    "url": "https://trailsignup-5fdea91b76c256-dev-ed.develop.my.salesforce-setup.com/lightning/setup/AiAgentMgmt/home",
+    "notFound": true,
+    "head": "Page not found\nThe page you requested was not found, or you do not have permission to view this page.",
+    "toggleLabels": []
+  }
+}
