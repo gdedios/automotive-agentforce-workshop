@@ -93,3 +93,28 @@ All 4 agent-backing flows were executed via `Flow.Interview` against seeded reco
 
 ## Screenshots
 `docs/phase9_probe/` — einstein-before/after, agentforce-before/after, agentforce-agents-node, quickfind-*.
+
+---
+
+# Ej 4 — Experience Cloud + MIAW — CLEAN-ORG verification (2026-06-03)
+
+**Clean org:** `Electra_Ej4` — `disposable@org-for-claude.com`, OrgId `00Dg8000007fEb0EAE`, instance `trailsignup-d5ab9b99a5c3dd`. **Genuinely pristine** OrgFarm trial (0 real custom `__c`, 0 pre-existing Networks/CustomSites, only the default `content/Brand_Center` bundle) — this is the clean-org re-verify the Phase 9 contamination caveat asked for.
+
+Verified clean-org facts (all ORG-INDEPENDENT, high confidence):
+- 45-component package deploys clean (45/45); permset assigns; seeder = 5 models / 30 slots / 15 inventory / 3 leads. **Confirms Ej 0 install path on a truly clean org** (the Phase 9 ORG-DEPENDENT caveat is now resolved for Ej 0).
+- Einstein→Agentforce enable order holds (Einstein first, else Agentforce page 404s). All 4 Agentforce metadata types SUPPORTED after enable.
+
+### DRIFT-4.1 — Experience Cloud is a THREE-stage gate on a fresh org, each with async lag (BLOCKER-class for facilitators)
+**Finding:** The site does NOT deploy cold. The real sequence is:
+1. **Enable Digital Experiences** — Setup → Digital Experiences → Settings → check "Enable Digital Experiences" → Save. The checkbox lives in a **Visualforce child iframe** (`/_ui/networks/setup/NetworkSetti...`, id `thePage:theForm:setDomainPB:enableNetworkPrefId`), not the top frame — UI automation must target the frame. Enabling auto-creates a `content/Brand_Center` bundle (the confirmation it's on).
+2. **`sf community create --template-name "Build Your Own (LWR)" --url-path-prefix electra`** — the LWR site/community must exist BEFORE the bundle deploys (provision-then-deploy). On a freshly-enabled org this returns `INSUFFICIENT_ACCESS_OR_READONLY` for 10-15+ min — community-creation infra provisions **asynchronously** behind the DigExp toggle.
+3. **Deploy** `DigitalExperienceBundle` + `Network` + `DigitalExperienceConfig` + `MessagingChannel` + `EmbeddedServiceConfig` onto the created site, then **`sf community publish`**.
+**Guide impact:** Ej 4 must NOT assume `sf project deploy` of the site works cold. It needs (a) the enable step, (b) `sf community create` first, (c) a "be patient — provisioning lags" warning, then (d) bundle deploy + publish. This is the longest, most fragile workshop phase. Pre-provision the site the day before delivery if possible.
+
+### DRIFT-4.2 — MIAW MessagingChannel requires the published Bot to exist
+**Finding:** `MessagingChannel:Electra_Customer_MIAW` deploy fails "no Bot named ElectraAI_Auto_Concierge found" until the agent is published+activated. And `EmbeddedServiceConfig` fails "no CustomSite" until the site exists. So the Ej 4 deploy order is strictly: site (community create) → agent (publish+activate) → MIAW channel → embedded service → publish site.
+
+### DRIFT-4.3 — `sf agent publish` 404s on a freshly-enabled org (same async-lag class)
+**Finding:** ~15 min after enabling Agentforce, `sf agent publish authoring-bundle` returns `AgentApiNotFound` / HTTP 404 even with all permsets correct (`CopilotSalesforceAdmin`, `AgentforceServiceAgentBuilder`) and a valid `default_agent_user`. The authoring bundle deploys as metadata fine, but the publish→runnable-Bot API lags. Same fresh-org async-provisioning pattern as DRIFT-4.1 step 2. Workaround if persistent: publish via the NEW Builder UI (different code path).
+
+> **Net Ej 4 verdict:** the metadata + deploy mechanics are CORRECT (validated where reachable); the friction is entirely **fresh-org async provisioning lag** across three subsystems (DigExp community-create, Agent API). A facilitator must budget soak time and follow the strict create-then-deploy order. See LRN-014/016/017/018.
