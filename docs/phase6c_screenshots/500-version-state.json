@@ -1,0 +1,21 @@
+{
+  "url": "https://orgfarm-2ff7de0f2c-dev-ed.develop.lightning.force.com/AgentAuthoring/agentAuthoringBuilder.app#/project?projectId=1bYgK00000081TaUAI&projectVersionId=1bZgK000000FrC5UAK",
+  "title": "Agentforce Builder",
+  "versionTexts": [
+    "Version 3 (Active)"
+  ],
+  "buttons": [
+    {
+      "text": "New Version",
+      "disabled": false,
+      "l": 1317,
+      "t": 9
+    },
+    {
+      "text": "Deactivate",
+      "disabled": false,
+      "l": 1442,
+      "t": 9
+    }
+  ]
+}

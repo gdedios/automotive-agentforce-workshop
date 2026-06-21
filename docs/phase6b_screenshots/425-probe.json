@@ -1,0 +1,197 @@
+{
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Commit this version?",
+    "Add a Data Library to Your Agent"
+  ],
+  "buttons": [
+    {
+      "text": "Save",
+      "disabled": false,
+      "rect": {
+        "l": 1333,
+        "t": 9
+      }
+    },
+    {
+      "text": "Commit Version",
+      "disabled": false,
+      "rect": {
+        "l": 1410,
+        "t": 9
+      }
+    },
+    {
+      "text": "Show menu",
+      "disabled": false,
+      "rect": {
+        "l": 1556,
+        "t": 9
+      }
+    },
+    {
+      "text": "Reset Chat",
+      "disabled": false,
+      "rect": {
+        "l": 1535,
+        "t": 79
+      }
+    },
+    {
+      "text": "Cancel and close",
+      "disabled": false,
+      "rect": {
+        "l": 1188,
+        "t": 365
+      }
+    },
+    {
+      "text": "Version 3 (Draft)Version 3 (Draft)",
+      "disabled": false,
+      "rect": {
+        "l": 374,
+        "t": 9
+      }
+    },
+    {
+      "text": "Hide Explorer",
+      "disabled": false,
+      "rect": {
+        "l": 292,
+        "t": 78
+      }
+    },
+    {
+      "text": "Add Resource",
+      "disabled": false,
+      "rect": {
+        "l": 276,
+        "t": 125
+      }
+    },
+    {
+      "text": "CanvasShow Code View Preference",
+      "disabled": false,
+      "rect": {
+        "l": 1093,
+        "t": 71
+      }
+    },
+    {
+      "text": "Hide Assistant",
+      "disabled": false,
+      "rect": {
+        "l": 1559,
+        "t": 79
+      }
+    },
+    {
+      "text": "Cancel",
+      "disabled": false,
+      "rect": {
+        "l": 985,
+        "t": 555
+      }
+    },
+    {
+      "text": "Enlarge panel",
+      "disabled": false,
+      "rect": {
+        "l": 1142,
+        "t": 953
+      }
+    },
+    {
+      "text": "Expand panel",
+      "disabled": false,
+      "rect": {
+        "l": 1174,
+        "t": 953
+      }
+    },
+    {
+      "text": "Close Agent Definition tab",
+      "disabled": false,
+      "rect": {
+        "l": 587,
+        "t": 78
+      }
+    },
+    {
+      "text": "Close Data Library tab",
+      "disabled": false,
+      "rect": {
+        "l": 731,
+        "t": 78
+      }
+    },
+    {
+      "text": "All Problems",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 996
+      }
+    },
+    {
+      "text": "0 Errors",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 1028
+      }
+    },
+    {
+      "text": "0 Warnings",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 1060
+      }
+    },
+    {
+      "text": "Refresh",
+      "disabled": false,
+      "rect": {
+        "l": 1111,
+        "t": 311
+      }
+    },
+    {
+      "text": "Clear Data Library Selection",
+      "disabled": false,
+      "rect": {
+        "l": 1081,
+        "t": 320
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "ph": "Search...",
+      "lbl": "",
+      "rect": {
+        "l": 16,
+        "t": 124
+      }
+    },
+    {
+      "ph": "Ask for help or describe what you'd like to build...",
+      "lbl": "Ask for help or describe what you'd like to build...",
+      "rect": {
+        "l": 1241,
+        "t": 903
+      }
+    },
+    {
+      "ph": "Electra FAQ Library",
+      "lbl": "Data Library",
+      "rect": {
+        "l": 397,
+        "t": 311
+      }
+    }
+  ]
+}

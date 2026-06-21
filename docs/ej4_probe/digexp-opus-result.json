@@ -1,0 +1,8 @@
+{
+  "before": false,
+  "afterCheck": true,
+  "domainFieldFound": 0,
+  "saveSel": "input[type=button][value=\"Save\"]",
+  "saveClicked": true,
+  "error": " Error: Locators must belong to the same frame."
+}

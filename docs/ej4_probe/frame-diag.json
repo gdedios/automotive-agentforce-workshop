@@ -1,0 +1,26 @@
+{
+  "frames": [
+    {
+      "url": "https://trailsignup-d5ab9b99a5c3dd.my.salesforce-setup.com/lightning/setup/NetworkSettings",
+      "checkboxCount": 0,
+      "checkboxes": []
+    },
+    {
+      "url": "https://trailsignup-d5ab9b99a5c3dd.my.salesforce-setup.com/_ui/networks/setup/NetworkSetti",
+      "checkboxCount": 1,
+      "checkboxes": [
+        {
+          "checked": false,
+          "label": "Enable Digital Experiences",
+          "id": "thePage:theForm:setDomainPB:enableNetworkPrefId",
+          "name": "thePage:theForm:setDomainPB:enableNetworkPrefId"
+        }
+      ]
+    },
+    {
+      "url": "https://login.salesforce.com/login/sessionserver212.html",
+      "checkboxCount": 0,
+      "checkboxes": []
+    }
+  ]
+}

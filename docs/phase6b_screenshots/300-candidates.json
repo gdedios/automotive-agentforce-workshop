@@ -1,0 +1,20 @@
+[
+  {
+    "tag": "SPAN",
+    "cls": "",
+    "rect": {
+      "left": 44,
+      "top": 546.25,
+      "w": 28.2109375,
+      "h": 15
+    },
+    "chain": [
+      {
+        "tag": "SPAN",
+        "role": null,
+        "cls": "",
+        "expanded": null
+      }
+    ]
+  }
+]

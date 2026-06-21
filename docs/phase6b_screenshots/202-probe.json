@@ -1,0 +1,107 @@
+{
+  "buttons": [
+    {
+      "text": "Search...",
+      "aria": "Search"
+    },
+    {
+      "text": "This item doesn't support favorites",
+      "aria": "This item doesn't support favorites"
+    },
+    {
+      "text": "Favorites list",
+      "aria": ""
+    },
+    {
+      "text": "Guidance Center",
+      "aria": ""
+    },
+    {
+      "text": "Salesforce Help",
+      "aria": ""
+    },
+    {
+      "text": "1Notifications",
+      "aria": ""
+    },
+    {
+      "text": "View profile",
+      "aria": ""
+    },
+    {
+      "text": "Show Navigation Menu",
+      "aria": "Show Navigation Menu"
+    },
+    {
+      "text": "App Launcher",
+      "aria": ""
+    },
+    {
+      "text": "Menu",
+      "aria": "Toggle Panel"
+    },
+    {
+      "text": "Collapse",
+      "aria": "Collapse"
+    },
+    {
+      "text": "New Agent",
+      "aria": ""
+    },
+    {
+      "text": "More options",
+      "aria": ""
+    },
+    {
+      "text": "Refresh",
+      "aria": ""
+    },
+    {
+      "text": "Pin the Panel",
+      "aria": "Pin the Panel"
+    },
+    {
+      "text": "Home",
+      "aria": ""
+    },
+    {
+      "text": "Close",
+      "aria": ""
+    },
+    {
+      "text": "Show menu",
+      "aria": ""
+    },
+    {
+      "text": "Expanded View",
+      "aria": "Expanded View"
+    },
+    {
+      "text": "Show Agent Name column actions",
+      "aria": ""
+    },
+    {
+      "text": "Show Created By column actions",
+      "aria": ""
+    },
+    {
+      "text": "Show Created Date column actions",
+      "aria": ""
+    },
+    {
+      "text": "Show Last Modified By column actions",
+      "aria": ""
+    },
+    {
+      "text": "Show Last Modified Date column actions",
+      "aria": ""
+    },
+    {
+      "text": "Show actions",
+      "aria": ""
+    }
+  ],
+  "statusBadge": null,
+  "tabs": [],
+  "explorer": []
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "path": "lightning/setup/Networks/home",
+    "title": "Page not found | Salesforce",
+    "notFound": true,
+    "hasNew": false,
+    "bodySample": "Skip to Navigation Skip to Main Content Search Setup This item doesn't support favorites Favorites list Guidance Center Salesforce Help Setup 1 Notifications 1 "
+  },
+  {
+    "path": "lightning/setup/DigitalExperiencesSetup/home",
+    "title": "Page not found | Salesforce",
+    "notFound": true,
+    "hasNew": false,
+    "bodySample": "Skip to Navigation Skip to Main Content Search Setup This item doesn't support favorites Favorites list Guidance Center Salesforce Help Setup 1 Notifications 1 "
+  },
+  {
+    "path": "lightning/setup/NetworkCreation/home",
+    "title": "Page not found | Salesforce",
+    "notFound": true,
+    "hasNew": false,
+    "bodySample": "Skip to Navigation Skip to Main Content Search Setup This item doesn't support favorites Favorites list Guidance Center Salesforce Help Setup 1 Notifications 1 "
+  },
+  {
+    "path": "_ui/networks/setup/NetworkSettingsPage",
+    "title": "Settings | Salesforce",
+    "notFound": false,
+    "hasNew": false,
+    "bodySample": "Skip to Navigation Skip to Main Content Search Setup This item doesn't support favorites Favorites list Salesforce Help Setup Notifications View profile App Lau"
+  },
+  {
+    "path": "lightning/setup/SetupNetworks/home",
+    "title": "Page not found | Salesforce",
+    "notFound": true,
+    "hasNew": false,
+    "bodySample": "Skip to Navigation Skip to Main Content Search Setup This item doesn't support favorites Favorites list Guidance Center Salesforce Help Setup 1 Notifications 1 "
+  }
+]

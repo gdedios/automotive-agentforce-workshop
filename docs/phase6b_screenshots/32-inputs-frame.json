@@ -1,0 +1,74 @@
+[
+  {
+    "tag": "INPUT",
+    "type": "search",
+    "name": "",
+    "id": "global-search-01",
+    "placeholder": "",
+    "aria": "",
+    "visible": false
+  },
+  {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "id": "324:0",
+    "placeholder": "Search Setup",
+    "aria": "",
+    "visible": true
+  },
+  {
+    "tag": "INPUT",
+    "type": "search",
+    "name": "",
+    "id": "466:0",
+    "placeholder": "Quick Find",
+    "aria": "",
+    "visible": true
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "Agentforce",
+    "id": "radio-id",
+    "placeholder": "",
+    "aria": "",
+    "visible": false
+  },
+  {
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "name": "",
+    "id": "",
+    "placeholder": "Describe your task or ask a question…",
+    "aria": "Describe your task or ask a question…",
+    "visible": false
+  },
+  {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "id": "input-228",
+    "placeholder": "Enter a name...",
+    "aria": "",
+    "visible": true
+  },
+  {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "",
+    "id": "input-230",
+    "placeholder": "Enter an API Name...",
+    "aria": "",
+    "visible": true
+  },
+  {
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "name": "_description",
+    "id": "input-234",
+    "placeholder": "Enter a description...",
+    "aria": "",
+    "visible": true
+  }
+]

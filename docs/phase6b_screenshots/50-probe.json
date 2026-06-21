@@ -1,0 +1,313 @@
+{
+  "combos": [
+    {
+      "tag": "INPUT",
+      "aria": "",
+      "text": "",
+      "placeholder": "Search Setup"
+    },
+    {
+      "tag": "LIGHTNING-GROUPED-COMBOBOX",
+      "aria": "",
+      "text": "",
+      "placeholder": "Select a data type..."
+    },
+    {
+      "tag": "LIGHTNING-BASE-COMBOBOX",
+      "aria": "",
+      "text": "",
+      "placeholder": "Select a data type..."
+    },
+    {
+      "tag": "INPUT",
+      "aria": "Data Type",
+      "text": "",
+      "placeholder": "Select a data type..."
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "role": "",
+      "aria": "",
+      "placeholder": "",
+      "name": "",
+      "id": "global-search-01"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "role": "combobox",
+      "aria": "",
+      "placeholder": "Search Setup",
+      "name": "",
+      "id": "324:0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "role": "",
+      "aria": "",
+      "placeholder": "Quick Find",
+      "name": "",
+      "id": "466:0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "role": "combobox",
+      "aria": "Data Type",
+      "placeholder": "Select a data type...",
+      "name": "",
+      "id": "combobox-input-290"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "role": "",
+      "aria": "",
+      "placeholder": "",
+      "name": "Agentforce",
+      "id": "radio-id"
+    }
+  ],
+  "buttons": [
+    {
+      "aria": "This item doesn't support favorites",
+      "text": "This item doesn't support favorites"
+    },
+    {
+      "aria": "",
+      "text": "Favorites list"
+    },
+    {
+      "aria": "",
+      "text": "Guidance Center"
+    },
+    {
+      "aria": "",
+      "text": "Salesforce Help"
+    },
+    {
+      "aria": "",
+      "text": "1Notifications"
+    },
+    {
+      "aria": "",
+      "text": "View profile"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Collapse"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "",
+      "text": "Expand"
+    },
+    {
+      "aria": "Toggle Panel",
+      "text": "Menu"
+    },
+    {
+      "aria": "",
+      "text": "Show menu"
+    },
+    {
+      "aria": "",
+      "text": "App Launcher"
+    },
+    {
+      "aria": "",
+      "text": "Library Setup"
+    },
+    {
+      "aria": "",
+      "text": "Edit"
+    },
+    {
+      "aria": "",
+      "text": "Data Type Help Info"
+    },
+    {
+      "aria": "",
+      "text": "Dismiss"
+    },
+    {
+      "aria": "Expanded View",
+      "text": "Expanded View"
+    },
+    {
+      "aria": "",
+      "text": ""
+    },
+    {
+      "aria": "close",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "text": ""
+    },
+    {
+      "aria": "Pin the Panel",
+      "text": "Pin the Panel"
+    },
+    {
+      "aria": "",
+      "text": "Home"
+    },
+    {
+      "aria": "",
+      "text": "Close"
+    },
+    {
+      "aria": "send",
+      "text": ""
+    }
+  ]
+}

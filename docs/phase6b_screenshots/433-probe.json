@@ -1,0 +1,137 @@
+{
+  "title": "Agentforce Builder",
+  "url": "https://orgfarm-2ff7de0f2c-dev-ed.develop.lightning.force.com/AgentAuthoring/agentAuthoringBuilder.app#/project?projectId=1bYgK00000081TaUAI&projectVersionId=1bZgK000000FrC5UAK",
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Subagents",
+    "Agent Definition",
+    "Basic Information"
+  ],
+  "buttons": [
+    {
+      "text": "Close",
+      "disabled": false,
+      "l": 1029,
+      "t": 23
+    },
+    {
+      "text": "New Version",
+      "disabled": false,
+      "l": 1333,
+      "t": 9
+    },
+    {
+      "text": "Activate",
+      "disabled": false,
+      "l": 1458,
+      "t": 9
+    },
+    {
+      "text": "Show menu",
+      "disabled": false,
+      "l": 1556,
+      "t": 9
+    },
+    {
+      "text": "Reset Chat",
+      "disabled": false,
+      "l": 1535,
+      "t": 79
+    },
+    {
+      "text": "Version 3 (Committed)Version 3 (Committed)",
+      "disabled": false,
+      "l": 374,
+      "t": 9
+    },
+    {
+      "text": "Hide Explorer",
+      "disabled": false,
+      "l": 292,
+      "t": 78
+    },
+    {
+      "text": "Add Resource",
+      "disabled": true,
+      "l": 276,
+      "t": 125
+    },
+    {
+      "text": "CanvasShow Code View Preference",
+      "disabled": false,
+      "l": 1093,
+      "t": 71
+    },
+    {
+      "text": "Hide Assistant",
+      "disabled": false,
+      "l": 1559,
+      "t": 79
+    },
+    {
+      "text": "Enlarge panel",
+      "disabled": false,
+      "l": 1142,
+      "t": 953
+    },
+    {
+      "text": "Expand panel",
+      "disabled": false,
+      "l": 1174,
+      "t": 953
+    },
+    {
+      "text": "Close Agent Definition tab",
+      "disabled": false,
+      "l": 587,
+      "t": 78
+    },
+    {
+      "text": "All Problems",
+      "disabled": false,
+      "l": 334,
+      "t": 996
+    },
+    {
+      "text": "0 Errors",
+      "disabled": false,
+      "l": 334,
+      "t": 1028
+    },
+    {
+      "text": "0 Warnings",
+      "disabled": false,
+      "l": 334,
+      "t": 1060
+    },
+    {
+      "text": "Description Help Info",
+      "disabled": false,
+      "l": 488,
+      "t": 469
+    },
+    {
+      "text": "Show Subagent column actions",
+      "disabled": false,
+      "l": 734,
+      "t": 681
+    },
+    {
+      "text": "Show Description column actions",
+      "disabled": false,
+      "l": 1098,
+      "t": 681
+    },
+    {
+      "text": "Agent's User Record Help Info",
+      "disabled": false,
+      "l": 545,
+      "t": 331
+    }
+  ],
+  "versions": [
+    "Version 3 (Committed)"
+  ]
+}

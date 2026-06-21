@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Add Resource",
+    "l": 276,
+    "t": 125
+  },
+  {
+    "text": "Add from Asset Library",
+    "l": 262,
+    "t": 504
+  },
+  {
+    "text": "New Action",
+    "l": 262,
+    "t": 540
+  },
+  {
+    "text": "Sort by:Subagent",
+    "l": 398,
+    "t": 673
+  },
+  {
+    "text": "Show Subagent column actions",
+    "l": 742,
+    "t": 681
+  },
+  {
+    "text": "Show Description column actions",
+    "l": 1114,
+    "t": 681
+  }
+]

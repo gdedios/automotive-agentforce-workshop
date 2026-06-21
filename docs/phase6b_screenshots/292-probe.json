@@ -1,0 +1,25 @@
+{
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Subagents",
+    "Agent Definition",
+    "Basic Information"
+  ],
+  "buttons": [
+    {
+      "text": "Save",
+      "disabled": false
+    },
+    {
+      "text": "Commit Version",
+      "disabled": false
+    },
+    {
+      "text": "Version 3 (Draft)Version 3 (Draft)",
+      "disabled": false
+    }
+  ],
+  "libraries": []
+}

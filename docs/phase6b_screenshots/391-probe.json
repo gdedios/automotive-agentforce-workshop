@@ -1,0 +1,59 @@
+{
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Actions",
+    "Subagents",
+    "Agent Definition",
+    "Basic Information"
+  ],
+  "items": [],
+  "inputs": [
+    {
+      "ph": "Search...",
+      "rect": {
+        "l": 16,
+        "t": 124,
+        "w": 252,
+        "h": 32
+      }
+    },
+    {
+      "ph": "Search actions...",
+      "rect": {
+        "l": 472,
+        "t": 145,
+        "w": 865,
+        "h": 32
+      }
+    },
+    {
+      "ph": "Electra AgentUser (agent.user.e34d4d1c9ff9@orgfarm.salesforce.com)",
+      "rect": {
+        "l": 397,
+        "t": 354,
+        "w": 354,
+        "h": 32
+      }
+    },
+    {
+      "ph": "Enter name...",
+      "rect": {
+        "l": 397,
+        "t": 283,
+        "w": 354,
+        "h": 32
+      }
+    },
+    {
+      "ph": "Enter developer name...",
+      "rect": {
+        "l": 775,
+        "t": 283,
+        "w": 354,
+        "h": 32
+      }
+    }
+  ]
+}

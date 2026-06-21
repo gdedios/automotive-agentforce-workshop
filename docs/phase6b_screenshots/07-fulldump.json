@@ -1,0 +1,31 @@
+[
+  {
+    "depth": 0,
+    "url": "https://orgfarm-2ff7de0f2c-dev-ed.develop.my.salesforce-setup.com/lightning/setup/EinsteinDataLibrary/home",
+    "title": "Home | Salesforce",
+    "h1": [],
+    "buttons": [
+      "×",
+      "Refresh",
+      "This item doesn't support favorites",
+      "Favorites list",
+      "Global Actions",
+      "Guidance Center",
+      "Salesforce Help",
+      "Setup",
+      "1Notifications",
+      "View profile",
+      "Object Manager List",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand"
+    ],
+    "snippet": "Sfdclogo×Sorry to interruptCSS ErrorRefreshSearch Salesforce Open menu item submenuSpring '26Loading /* We hide the default loading box, and show our own oneLoadingBox */ #auraLoadingBox{display:none;} .oneLoadingBox{position:absolute;overflow:hidden;top:0;left:0;width:100%;height:100%;padding:0;margin:0 auto;display:block;background:#009bda;border-radius:0;z-index:1}.oneLoadingBox .logo{opacity:0;position:relative;background-size:contain;max-width:230px;height:280px;top:50%;margin:-160px auto;-webkit-animation:bounceIn .3s ease-in .5s 1;-webkit-animation-fill-mode:forwards;animation:bounceIn .3s ease-in 0 1;animation-fill-mode:forwards}.oneLoadingBox .loadingText{display:none}body.desktop{overflow:visible} .walkthrough-callout{position:absolute;width:384px;z-index:205000}.walkthrough-callout.ready{animation:calloutPop .2s ease-in-out;-webkit-animation:calloutPop .2s ease-in-out}.walkthrough-callout .callout{position:relative;font-family:SalesforceSans-Regular,Arial,sans-serif;color:#fff;background-color:#102442;border-radius:6px;margin:0;box-shadow:0 2px 4px 0 rgba(0,0,0,.45)}.walkthrough-callout .callout-inner{overflow:hidden;border-radius:6px}.walkthrough-callout .callout .callout-header{font-family:SalesforceSans-Light,Arial,sans-serif;background:#1f3659;border-top-left-radius:6px;border-top-right-radius:6px;border:1px solid #1f3659;padding:24px!important}.walkthrough-callout .callout .callout-body{padding:0 24px!important;font-weight:500;font-size:14px;word-wrap:break-wo"
+  }
+]

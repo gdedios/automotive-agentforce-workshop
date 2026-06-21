@@ -1,0 +1,119 @@
+{
+  "url": "https://orgfarm-2ff7de0f2c-dev-ed.develop.lightning.force.com/AgentAuthoring/agentAuthoringBuilder.app#/project?projectId=1bYgK00000081TaUAI&projectVersionId=1bZgK000000FnBhUAK",
+  "title": "Agentforce Builder",
+  "buttons": [
+    {
+      "text": "New Version",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Deactivate",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Show menu",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Reset Chat",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Version 2 (Active)Version 2 (Active)",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Hide Explorer",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Add Resource",
+      "aria": "",
+      "disabled": true
+    },
+    {
+      "text": "CanvasShow Code View Preference",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Hide Assistant",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Enlarge panel",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Expand panel",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Close Agent Definition tab",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Copy to clipboard",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "All Problems",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "0 Errors",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "0 Warnings",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Description Help Info",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Show Subagent column actions",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Show Description column actions",
+      "aria": "",
+      "disabled": false
+    },
+    {
+      "text": "Agent's User Record Help Info",
+      "aria": "",
+      "disabled": false
+    }
+  ],
+  "explorer": [
+    "Explorer"
+  ],
+  "statusBadges": [],
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Subagents",
+    "Agent Definition",
+    "Basic Information"
+  ],
+  "agentName": null
+}

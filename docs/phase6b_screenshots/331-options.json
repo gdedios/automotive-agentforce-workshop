@@ -1,0 +1,35 @@
+[
+  {
+    "text": "Preview",
+    "tag": "LI",
+    "role": "presentation",
+    "rect": {
+      "l": 333,
+      "t": 70.5,
+      "w": 136,
+      "h": 32
+    }
+  },
+  {
+    "text": "Agent Definition",
+    "tag": "LI",
+    "role": "presentation",
+    "rect": {
+      "l": 477,
+      "t": 70.5,
+      "w": 136,
+      "h": 32
+    }
+  },
+  {
+    "text": "Data Library",
+    "tag": "LI",
+    "role": "presentation",
+    "rect": {
+      "l": 621,
+      "t": 70.5,
+      "w": 136,
+      "h": 32
+    }
+  }
+]

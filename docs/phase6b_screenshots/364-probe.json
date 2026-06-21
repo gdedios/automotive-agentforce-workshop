@@ -1,0 +1,26 @@
+{
+  "headings": [
+    "Estado y FAQ",
+    "Instructions",
+    "Actions Available For Reasoning",
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce"
+  ],
+  "buttons": [
+    {
+      "text": "Save",
+      "disabled": false
+    },
+    {
+      "text": "Commit Version",
+      "disabled": false
+    },
+    {
+      "text": "Add Resource",
+      "disabled": false
+    }
+  ],
+  "links": [],
+  "hasActions": false
+}

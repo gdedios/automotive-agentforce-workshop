@@ -1,0 +1,10 @@
+{
+  "step": "enable-einstein",
+  "clicked": false,
+  "confirmed": null,
+  "afterChecked": true,
+  "clickDetail": {
+    "ok": true,
+    "already": true
+  }
+}

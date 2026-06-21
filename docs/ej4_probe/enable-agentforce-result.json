@@ -1,0 +1,10 @@
+{
+  "step": "enable-agentforce",
+  "clicked": false,
+  "confirmed": null,
+  "afterChecked": false,
+  "clickDetail": {
+    "ok": false,
+    "why": "no toggle"
+  }
+}

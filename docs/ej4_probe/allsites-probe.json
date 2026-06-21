@@ -1,0 +1,12 @@
+{
+  "frontdoorHost": "trailsignup-d5ab9b99a5c3dd.my.salesforce.com",
+  "landedUrl": "https://trailsignup-d5ab9b99a5c3dd.my.salesforce-setup.com/lightning/setup/SetupNetworks/home",
+  "title": "Page not found | Salesforce",
+  "bodyHas": {
+    "pageNotFound": true,
+    "allSites": false,
+    "newBtn": false
+  },
+  "bodySample": "Skip to Navigation | Skip to Main Content | Search Setup | This item doesn't support favorites | Favorites list | Guidance Center | Salesforce Help | Setup | Notifications | View profile | App Launcher | Setup | Press Spacebar to reorder tabs. | Home | Object Manager | Object Manager List | Quick Find | Setup Home | Salesforce Foundations | Salesforce Go | Service Setup Assistant | Hyperforce Assistant | Release Updates | Salesforce Mobile App | Lightning Usage | AgentExchange Offers | Manage Subscription | Sales Cloud Everywhere | ADMINISTRATION | Exp",
+  "newButtons": []
+}

@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "text": "New Action",
+      "tag": "A",
+      "role": "menuitem",
+      "rect": {
+        "l": 262,
+        "t": 540,
+        "w": 187,
+        "h": 36
+      }
+    },
+    {
+      "text": "Show Subagent column actions",
+      "tag": "BUTTON",
+      "role": null,
+      "rect": {
+        "l": 734,
+        "t": 681,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Show Description column actions",
+      "tag": "BUTTON",
+      "role": null,
+      "rect": {
+        "l": 1098,
+        "t": 681,
+        "w": 16,
+        "h": 17
+      }
+    }
+  ],
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Subagents",
+    "Agent Definition",
+    "Basic Information"
+  ]
+}

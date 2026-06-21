@@ -1,0 +1,32 @@
+{
+  "headings": [
+    "Agentforce Builder",
+    "Explorer",
+    "Agentforce",
+    "Basic Information",
+    "Inputs",
+    "Outputs",
+    "Additional Settings",
+    "Answer Questions with Knowledge"
+  ],
+  "tabs": [
+    "Problems",
+    "Preview",
+    "Agent Definition",
+    "Answer Questions with Knowledge",
+    "All Problems",
+    "0 Errors",
+    "0 Warnings"
+  ],
+  "buttons": [
+    {
+      "text": "Save",
+      "disabled": false
+    },
+    {
+      "text": "Commit Version",
+      "disabled": false
+    }
+  ],
+  "hasAQWK": true
+}

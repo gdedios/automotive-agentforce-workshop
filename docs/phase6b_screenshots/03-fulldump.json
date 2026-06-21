@@ -1,0 +1,28 @@
+[
+  {
+    "depth": 0,
+    "url": "https://orgfarm-2ff7de0f2c-dev-ed.develop.my.salesforce-setup.com/lightning/setup/AgentforceDataLibrary/home",
+    "title": "Page not found | Salesforce",
+    "h1": [
+      "Page not found"
+    ],
+    "buttons": [
+      "×",
+      "Refresh",
+      "This item doesn't support favorites",
+      "Favorites list",
+      "Global Actions",
+      "Guidance Center",
+      "Salesforce Help",
+      "Setup",
+      "1Notifications",
+      "View profile",
+      "Object Manager List",
+      "Expand",
+      "Expand",
+      "Expand",
+      "Expand"
+    ],
+    "snippet": "Sfdclogo×Sorry to interruptCSS ErrorRefreshSearch Salesforce Open menu item submenuSpring '26Loading /* We hide the default loading box, and show our own oneLoadingBox */ #auraLoadingBox{display:none;} .oneLoadingBox{position:absolute;overflow:hidden;top:0;left:0;width:100%;height:100%;padding:0;margin:0 auto;display:block;background:#009bda;border-radius:0;z-index:1}.oneLoadingBox .logo{opacity:0;position:relative;background-size:contain;max-width:230px;height:280px;top:50%;margin:-160px auto;-webkit-animation:bounceIn .3s ease-in .5s 1;-webkit-animation-fill-mode:forwards;animation:bounceIn .3s ease-in 0 1;animation-fill-mode:forwards}.oneLoadingBox .loadingText{display:none}body.desktop{overflow:visible} .walkthrough-callout{position:absolute;width:384px;z-index:205000}.walkthrough-call"
+  }
+]

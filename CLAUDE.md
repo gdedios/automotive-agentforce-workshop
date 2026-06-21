@@ -4,6 +4,8 @@ This file complements (does not replace) the upper `CLAUDE.md` files at `Project
 
 **Read this BEFORE acting in this folder.** It is short on purpose.
 
+> 🧠 **Shared brain:** the cross-project gotchas referenced in §5 (Builder NEW-vs-OLD URL, OrgFarm 2-interstitial login, Setup/Lightning host swap, AQWK `@knowledge` token, Drift truncation, LWR htmlEditor, MDM Chrome CDP, AiAuthoringBundle `INVALID_TYPE`) are now maintained canonically in `Projects/06-2026/claude-brain/` — scan `INDEX.md`, then open `docs/agentforce-builder-navigation.md`, `docs/atlas-org-preflight.md`, `docs/salesforce-browser-automation.md`, `docs/experience-cloud-lwr.md`, or `docs/headless-visual-verification.md` as needed. The §5 list below is kept as a project-local quick reference.
+
 ---
 
 ## 1. Brand canonical lives in one place
@@ -112,3 +114,16 @@ This project's memory entry: `~/.claude/projects/-Users-gdedios-Desktop-Test/mem
 Index entry in `MEMORY.md`. Update both whenever a load-bearing decision changes (use case, persona, deploy approach, agent api-name, package name).
 
 Do not store ephemeral build state in memory. Use `docs/COMPRESSION_*.md` for that — it lives in the repo and is regeneratable.
+
+## Build log (Context-Stack Layer 2 — keep it current, autonomously)
+
+This project has a `build-log.md` at its root: the append-only running narrative.
+**Maintain it yourself, without asking,** by appending a short timestamped bullet when ANY of these fire:
+- a phase / milestone completes, or a deploy goes green;
+- a non-obvious fix lands (more than one try, or a surprise like an unexpected field name);
+- a decision or its reversal (chose X over Y, and why);
+- a blocker is hit (what's blocked, what's needed to unblock);
+- **immediately before running `/compact`** — write a `[next]` bullet capturing exactly where we are.
+Rules: append-only, newest at the bottom, terse bullets with a `[tag]`. Do NOT rewrite history. No live secrets/tokens.
+Durable + teachable gotchas → flag as a **`/capture`** candidate (the brain is the shared layer; this log is local).
+The existing `docs/COMPRESSION_*.md` briefs remain the pre-compact handoff artifact; the build-log is the ongoing narrative. (Pattern: brain `docs/build-log-pattern.md`.)

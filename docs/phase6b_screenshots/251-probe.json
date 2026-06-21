@@ -1,0 +1,23 @@
+{
+  "buttons": [
+    {
+      "text": "New Version",
+      "disabled": false
+    },
+    {
+      "text": "Activate",
+      "disabled": false
+    },
+    {
+      "text": "Version 2 (Committed)Version 2 (Committed)",
+      "disabled": false
+    }
+  ],
+  "explorer": [
+    "Settings",
+    "Subagents",
+    "Variables",
+    "Connections",
+    "Data"
+  ]
+}

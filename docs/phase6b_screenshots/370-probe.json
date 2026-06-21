@@ -1,0 +1,490 @@
+{
+  "allButtons": [
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 492,
+        "t": 298,
+        "w": 16,
+        "h": 16
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 574,
+        "t": 395,
+        "w": 10,
+        "h": 10
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 642,
+        "t": 815,
+        "w": 16,
+        "h": 16
+      }
+    },
+    {
+      "text": "",
+      "aria": "Accordion",
+      "disabled": false,
+      "rect": {
+        "l": 369,
+        "t": 847,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 544,
+        "t": 852,
+        "w": 10,
+        "h": 10
+      }
+    },
+    {
+      "text": "",
+      "aria": "Insert block",
+      "disabled": false,
+      "rect": {
+        "l": 1144,
+        "t": 863,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "text": "Save",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1333,
+        "t": 9,
+        "w": 64,
+        "h": 32
+      }
+    },
+    {
+      "text": "Commit Version",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1410,
+        "t": 9,
+        "w": 134,
+        "h": 32
+      }
+    },
+    {
+      "text": "Show menu",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1556,
+        "t": 9,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "text": "Reset Chat",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1535,
+        "t": 79,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Version 3 (Draft)Version 3 (Draft)",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 374,
+        "t": 9,
+        "w": 125,
+        "h": 32
+      }
+    },
+    {
+      "text": "Hide Explorer",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 292,
+        "t": 78,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Add Resource",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 276,
+        "t": 125,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "text": "CanvasShow Code View Preference",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1093,
+        "t": 71,
+        "w": 114,
+        "h": 32
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 492,
+        "t": 298,
+        "w": 16,
+        "h": 16
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 574,
+        "t": 395,
+        "w": 10,
+        "h": 10
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 642,
+        "t": 815,
+        "w": 16,
+        "h": 16
+      }
+    },
+    {
+      "text": "",
+      "aria": "Accordion",
+      "disabled": false,
+      "rect": {
+        "l": 369,
+        "t": 847,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 544,
+        "t": 852,
+        "w": 10,
+        "h": 10
+      }
+    },
+    {
+      "text": "",
+      "aria": "Insert block",
+      "disabled": false,
+      "rect": {
+        "l": 1144,
+        "t": 863,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "text": "Hide Assistant",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1559,
+        "t": 79,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 22,
+        "t": 209,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 22,
+        "t": 305,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 22,
+        "t": 521,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 22,
+        "t": 545,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 22,
+        "t": 569,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Enlarge panel",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1142,
+        "t": 953,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Expand panel",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 1174,
+        "t": 953,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 329,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 353,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 377,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 401,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 425,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 449,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 46,
+        "t": 473,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "Add action to subagent",
+      "disabled": false,
+      "rect": {
+        "l": 268,
+        "t": 473,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "",
+      "aria": "Show options",
+      "disabled": false,
+      "rect": {
+        "l": 288,
+        "t": 473,
+        "w": 16,
+        "h": 17
+      }
+    },
+    {
+      "text": "Close Agent Definition tab",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 587,
+        "t": 78,
+        "w": 14,
+        "h": 16
+      }
+    },
+    {
+      "text": "Close Estado y FAQ tab",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 731,
+        "t": 78,
+        "w": 14,
+        "h": 16
+      }
+    },
+    {
+      "text": "All Problems",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 996,
+        "w": 167,
+        "h": 28
+      }
+    },
+    {
+      "text": "0 Errors",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 1028,
+        "w": 167,
+        "h": 28
+      }
+    },
+    {
+      "text": "0 Warnings",
+      "aria": "",
+      "disabled": false,
+      "rect": {
+        "l": 334,
+        "t": 1060,
+        "w": 167,
+        "h": 28
+      }
+    },
+    {
+      "text": "",
+      "aria": "send",
+      "disabled": true,
+      "rect": {
+        "l": 1543,
+        "t": 903,
+        "w": 32,
+        "h": 72
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "ph": "Search...",
+      "aria": "",
+      "rect": {
+        "l": 16,
+        "t": 124,
+        "w": 252,
+        "h": 32
+      }
+    }
+  ],
+  "plusIcons": []
+}
